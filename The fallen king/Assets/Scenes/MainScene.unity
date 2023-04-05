@@ -207,6 +207,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1001 &1918636261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -268,6 +269,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5404e2d304ce9d84e8e0b958cc65ea6e, type: 3}
+=======
+--- !u!1 &1274013029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1274013030}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1274013030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274013029}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.27, y: 0.034, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2010995248}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2010995248 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1346163505537260895, guid: 4a8b7874573be5449b75b259ed09f302, type: 3}
+  m_PrefabInstance: {fileID: 1346163503592287856}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!1001 &1346163503592287856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -275,6 +314,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 97702261, guid: 4a8b7874573be5449b75b259ed09f302, type: 3}
+      propertyPath: attackPoint
+      value: 
+      objectReference: {fileID: 1274013030}
     - target: {fileID: 1346163505537260892, guid: 4a8b7874573be5449b75b259ed09f302, type: 3}
       propertyPath: m_Name
       value: Player
