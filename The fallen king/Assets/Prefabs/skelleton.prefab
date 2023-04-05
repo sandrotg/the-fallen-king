@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: -6495653487057535391}
   - component: {fileID: 7509340024812319571}
   - component: {fileID: 5492833011280489424}
+  - component: {fileID: 47907229954157453}
+  - component: {fileID: 8758435482515166741}
   m_Layer: 0
   m_Name: skelleton
   m_TagString: Untagged
@@ -132,3 +134,47 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &47907229954157453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517958174051876493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a07dff6aaddc4e4ea0d97654b8c2f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  routine: 0
+  cronometro: 0
+  animator: {fileID: 5492833011280489424}
+  direction: 0
+  Speed_walk: 1
+  target: {fileID: 0}
+  atack: 0
+  rangeV: 3
+  rangeA: 0
+  rango: {fileID: 0}
+  Hit: {fileID: 0}
+--- !u!50 &8758435482515166741
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517958174051876493}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1000
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
