@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private const string horizontal = "Horizontal";
     private const string MOVING = "isMoving";
     Animator animator;
+    public Rigidbody2D playerRigidBody;
     public Transform attackPoint;
     public float attackrange = 0.5f;
     public LayerMask enemyLayers;
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
+        playerRigidBody = GetComponent<Rigidbody2D>();
     }
     void Start()
     {
@@ -41,13 +43,16 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.L)){
             Attack3();
         }
+        animator.SetBool("block", Block());
+
     }
     void Move()
     {
         if (Mathf.Abs(Input.GetAxisRaw(horizontal)) > 0.5f)
         {
-            this.transform.Translate(
-                new Vector3(Input.GetAxisRaw(horizontal) * speed * Time.deltaTime, 0, 0));
+          /*  this.transform.Translate(
+                new Vector3(Input.GetAxisRaw(horizontal) * speed * Time.deltaTime, 0, 0)); */
+                playerRigidBody.velocity = new Vector2(Input.GetAxisRaw(horizontal) * speed, playerRigidBody.velocity.y);
             if (Input.GetAxis(horizontal) < 0)
             {
                 GetComponent<SpriteRenderer>().flipX = true;
@@ -59,8 +64,12 @@ public class PlayerController : MonoBehaviour
         }
         if (Mathf.Abs(Input.GetAxisRaw(vertical)) > 0.5f)
         {
-            this.transform.Translate(
-                new Vector3(0, Input.GetAxisRaw(vertical) * speed * Time.deltaTime, 0));
+           /* this.transform.Translate(
+                new Vector3(0, Input.GetAxisRaw(vertical) * speed * Time.deltaTime, 0)); */
+                playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, Input.GetAxisRaw(vertical) * speed);
+        }
+        if(Mathf.Abs(Input.GetAxisRaw(horizontal))<0.5f && Mathf.Abs(Input.GetAxisRaw(vertical))<0.5f){
+            playerRigidBody.velocity = Vector2.zero;
         }
 
     }
@@ -97,6 +106,16 @@ public class PlayerController : MonoBehaviour
     }
     void Attack3(){
         animator.SetTrigger("Attack3");
+    }
+    bool Block(){
+        if(Input.GetKey(KeyCode.K)){
+            speed = 0;
+            return true;   
+        }else{
+            speed = 4.0f;
+            return false;
+        }
+        
     }
     void OnDrawGizmosSelected(){
         if(attackPoint == null)
