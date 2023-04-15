@@ -95,7 +95,7 @@ public class Skelleton : MonoBehaviour
                         
                             case 1:
                             transform.rotation = Quaternion.Euler(0,0,0);
-                            transform.Translate(Vector3.up * Speed_walk * Time.deltaTime);
+                            transform.Translate(Vector3.down * Speed_walk * Time.deltaTime);
                             animator.SetBool("walking", true);
                             break;
                         }
@@ -126,7 +126,7 @@ public class Skelleton : MonoBehaviour
                         
                             case 1:
                             transform.rotation = Quaternion.Euler(0,180,0);
-                            transform.Translate(Vector3.up * Speed_walk * Time.deltaTime);
+                            transform.Translate(Vector3.down * Speed_walk * Time.deltaTime);
                             animator.SetBool("walking", true);
                             break;
                         }

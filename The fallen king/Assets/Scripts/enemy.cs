@@ -43,22 +43,16 @@ public class enemy : MonoBehaviour
         }
     }
     protected void init(){
-              enemyRigidBody = GetComponent<Rigidbody2D>(); 
+        enemyRigidBody = GetComponent<Rigidbody2D>(); 
         enemyAnimator = GetComponent<Animator>();
-        timeBetweenStepsCounter = timeBetweenSteps;
-        timeToMakeStepCounter = timeToMakeStep;  
+        timeBetweenStepsCounter = timeBetweenSteps*Random.Range(0.5f,1.5f);
+        timeToMakeStepCounter = timeToMakeStep*Random.Range(0.5f,1.5f);
     }
     protected bool Moving(){
         if(Mathf.Abs(enemyRigidBody.velocity.x) > 0.1f || Mathf.Abs(enemyRigidBody.velocity.y) > 0.1f){
             return true;
         }else{
             return false;
-        }
-    }
-    protected void OnCollisionEnter(Collider2D collision){
-        if(collision.tag == "Player"){
-            PlayerController controller = collision.GetComponent<PlayerController>();
-          //  controller.playerRigidBody.;
         }
     }
 }
