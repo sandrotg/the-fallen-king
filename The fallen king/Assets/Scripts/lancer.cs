@@ -13,6 +13,14 @@ public class lancer : enemy
     // Update is called once per frame
     void Update()
     {
-        move();
+        distanceFromPlayer = Vector2.Distance(player.transform.position, transform.position);
+        if (distanceFromPlayer > lineOFSite)
+        {
+            move();
+        }
+        else
+        {
+            followPlayer();
+        }
     }
 }

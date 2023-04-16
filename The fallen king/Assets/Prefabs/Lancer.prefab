@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1221528105488248088}
   - component: {fileID: 1221528105488248089}
   - component: {fileID: 1221528105488248090}
-  - component: {fileID: 1221528105488248091}
   - component: {fileID: 1221528105488248084}
   - component: {fileID: 1221528105488248095}
+  - component: {fileID: 3098086312176616923}
   m_Layer: 0
   m_Name: Lancer
   m_TagString: Enemy
@@ -108,32 +108,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &1221528105488248091
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1221528105488248085}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.21748082, y: -0.02514121}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 0.96}
-    newSize: {x: 1.28, y: 0.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.23747298, y: 0.30328846}
-  m_EdgeRadius: 0
 --- !u!50 &1221528105488248084
 Rigidbody2D:
   serializedVersion: 4
@@ -171,3 +145,20 @@ MonoBehaviour:
   timeBetweenSteps: 2
   timeToMakeStep: 1.5
   directionToMakeStep: {x: 0, y: 0}
+  lineOFSite: 5
+--- !u!70 &3098086312176616923
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221528105488248085}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.18651938, y: -0.055096086}
+  m_Size: {x: 0.16088387, y: 0.3665507}
+  m_Direction: 0
