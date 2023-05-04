@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy : MonoBehaviour
+class enemy : Character
 {
     [SerializeField] protected float enemySpeed = 1;
     protected Rigidbody2D enemyRigidBody;
@@ -15,6 +15,7 @@ public class enemy : MonoBehaviour
     protected Animator enemyAnimator;
     protected GameObject player;
     [SerializeField] protected float lineOFSite;
+    [SerializeField] protected float attackRange;
     protected float distanceFromPlayer;
     protected const string Move = "isMoving";
 
@@ -78,6 +79,7 @@ public class enemy : MonoBehaviour
         timeBetweenStepsCounter = timeBetweenSteps * Random.Range(0.5f, 1.5f);
         timeToMakeStepCounter = timeToMakeStep * Random.Range(0.5f, 1.5f);
         player = GameObject.Find("Player");
+        currentHealth = baseHealth;
     }
     protected bool Moving()
     {
@@ -89,6 +91,21 @@ public class enemy : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public void TakeDamage(float damage){
+        currentHealth -= damage;
+        enemyAnimator.SetTrigger("hit");
+        if(currentHealth <= 0){
+            Die();
+        }
+    }
+
+    protected void Die(){
+        enemyAnimator.SetBool("isDead", true);
+        GetComponent<Collider2D>().enabled = false;
+        enemyRigidBody.velocity = Vector2.zero;
+        this.enabled = false;
     }
     private void OnDrawGizmosSelected()
     {

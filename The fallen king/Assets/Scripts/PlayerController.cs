@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+class PlayerController : Character
 {
 
     public float speed = 4.0f;
@@ -13,8 +13,11 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D playerRigidBody;
     public Transform attackPoint;
     public float attackrange = 0.5f;
-    public LayerMask enemyLayers;
-
+    [SerializeField]
+    private LayerMask enemyLayers;
+    [SerializeField]
+    float attackRate = 2f;
+    float nextAttackTime = 0f;
 
     // Start is called before the first frame update
 
@@ -34,15 +37,25 @@ public class PlayerController : MonoBehaviour
 
         Move();
         animator.SetFloat(MOVING, isMoving());
-        if (Input.GetKeyDown(KeyCode.I)){
-            Attack1();
+        if (Time.time >= nextAttackTime)
+        {
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                Attack1();
+                nextAttackTime = Time.time + 1f/attackRate;
+            }
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                Attack2();
+                nextAttackTime = Time.time + 1.25f/attackRate;
+            }
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                Attack3();
+                nextAttackTime = Time.time + 1.5f/attackRate;
+            }
         }
-        if (Input.GetKeyDown(KeyCode.J)){
-            Attack2();
-        }
-        if(Input.GetKeyDown(KeyCode.L)){
-            Attack3();
-        }
+
         animator.SetBool("block", Block());
 
     }
@@ -50,25 +63,26 @@ public class PlayerController : MonoBehaviour
     {
         if (Mathf.Abs(Input.GetAxisRaw(horizontal)) > 0.5f)
         {
-          /*  this.transform.Translate(
-                new Vector3(Input.GetAxisRaw(horizontal) * speed * Time.deltaTime, 0, 0)); */
-                playerRigidBody.velocity = new Vector2(Input.GetAxisRaw(horizontal) * speed, playerRigidBody.velocity.y);
+            /*  this.transform.Translate(
+                  new Vector3(Input.GetAxisRaw(horizontal) * speed * Time.deltaTime, 0, 0)); */
+            playerRigidBody.velocity = new Vector2(Input.GetAxisRaw(horizontal) * speed, playerRigidBody.velocity.y);
             if (Input.GetAxis(horizontal) < 0)
             {
-                GetComponent<SpriteRenderer>().flipX = true;
+                transform.rotation = Quaternion.Euler(0, 180, 0);
             }
             if (Input.GetAxis(horizontal) > 0)
             {
-                GetComponent<SpriteRenderer>().flipX = false;
+                transform.rotation = Quaternion.Euler(0, 0, 0);
             }
         }
         if (Mathf.Abs(Input.GetAxisRaw(vertical)) > 0.5f)
         {
-           /* this.transform.Translate(
-                new Vector3(0, Input.GetAxisRaw(vertical) * speed * Time.deltaTime, 0)); */
-                playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, Input.GetAxisRaw(vertical) * speed);
+            /* this.transform.Translate(
+                 new Vector3(0, Input.GetAxisRaw(vertical) * speed * Time.deltaTime, 0)); */
+            playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, Input.GetAxisRaw(vertical) * speed);
         }
-        if(Mathf.Abs(Input.GetAxisRaw(horizontal))<0.5f && Mathf.Abs(Input.GetAxisRaw(vertical))<0.5f){
+        if (Mathf.Abs(Input.GetAxisRaw(horizontal)) < 0.5f && Mathf.Abs(Input.GetAxisRaw(vertical)) < 0.5f)
+        {
             playerRigidBody.velocity = Vector2.zero;
         }
 
@@ -91,34 +105,53 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    void Attack1(){
+    void Attack1()
+    {
         //Play an attack animation
         animator.SetTrigger("Attack1");
         //Detect enemies in range of attack
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange,enemyLayers);
-        // Damage them
-        foreach(Collider2D enemy in hitEnemies){
-            Debug.Log("we hit"+ enemy.name);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange, enemyLayers);
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<enemy>().TakeDamage(baseDamage);
         }
     }
-    void Attack2(){
+    void Attack2()
+    {
         animator.SetTrigger("Attack2");
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange*1.1f, enemyLayers);
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<enemy>().TakeDamage(baseDamage*1.25f);
+        }
     }
-    void Attack3(){
+    
+    void Attack3()
+    {
         animator.SetTrigger("Attack3");
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange*1.3f, enemyLayers);
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<enemy>().TakeDamage(baseDamage*1.5f);
+        }
     }
-    bool Block(){
-        if(Input.GetKey(KeyCode.K)){
+    bool Block()
+    {
+        if (Input.GetKey(KeyCode.K))
+        {
             speed = 0;
-            return true;   
-        }else{
+            return true;
+        }
+        else
+        {
             speed = 4.0f;
             return false;
         }
-        
+
     }
-    void OnDrawGizmosSelected(){
-        if(attackPoint == null)
+    void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackrange);
     }

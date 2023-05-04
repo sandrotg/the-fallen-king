@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1221528105488248084}
   - component: {fileID: 1221528105488248095}
   - component: {fileID: 3098086312176616923}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lancer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -141,6 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201b4c19456c90c40af7d58092c8d13e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseHealth: 80
+  baseDamage: 0
   enemySpeed: 1
   timeBetweenSteps: 2
   timeToMakeStep: 1.5
