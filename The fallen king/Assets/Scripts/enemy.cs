@@ -14,10 +14,41 @@ class enemy : Character
     [SerializeField] protected Vector2 directionToMakeStep;
     protected Animator enemyAnimator;
     protected GameObject player;
+    [SerializeField] protected LayerMask playerLayer;
     [SerializeField] protected float lineOFSite;
+    [SerializeField] protected float lineOfAttack;
     [SerializeField] protected float attackRange;
+    [SerializeField] protected Transform attackPoint;
+    [SerializeField] protected int numAttacks;
     protected float distanceFromPlayer;
     protected const string Move = "isMoving";
+    void Start()
+    {
+        init();
+    }
+
+    void Update()
+    {
+        distanceFromPlayer = Vector2.Distance(player.transform.position, transform.position);
+        if (distanceFromPlayer > lineOFSite)
+        {
+            move();
+        }
+        else
+        {
+            if (distanceFromPlayer > lineOfAttack)
+            {
+                followPlayer();
+            }
+            else
+            {
+                if (Time.time >= nextAttackTime)
+                {
+                    Attack(numAttacks);
+                }
+            }
+        }
+    }
 
     protected void move()
     {
@@ -46,11 +77,11 @@ class enemy : Character
         enemyAnimator.SetBool(Move, Moving());
         if (enemyRigidBody.velocity.x < 0)
         {
-            transform.rotation = Quaternion.Euler(0,180,0);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
         if (enemyRigidBody.velocity.x > 0)
         {
-            transform.rotation = Quaternion.Euler(0,0,0);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
     protected void followPlayer()
@@ -63,14 +94,44 @@ class enemy : Character
             enemyAnimator.SetBool(Move, true);
             if (transform.position.x < player.transform.position.x)
             {
-                transform.rotation = Quaternion.Euler(0,0,0);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
             }
             if (transform.position.x > player.transform.position.x)
             {
-                transform.rotation = Quaternion.Euler(0,180,0);
+                transform.rotation = Quaternion.Euler(0, 180, 0);
             }
         }
 
+    }
+
+    protected void Attack(int numAttacks)
+    {
+        Collider2D player;
+        if (distanceFromPlayer <= lineOfAttack)
+        {
+            int attackGenerator = Random.Range(1, numAttacks + 1);
+            switch (attackGenerator)
+            {
+                case 1:
+                    enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
+                    player = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
+                    player.GetComponent<PlayerController>().TakeDamage(baseDamage);
+                    nextAttackTime = Time.time + 1f / attackRate;
+                    break;
+                case 2:
+                    enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
+                    player = Physics2D.OverlapCircle(attackPoint.position, attackRange * 1.25f, playerLayer);
+                    player.GetComponent<PlayerController>().TakeDamage(baseDamage * 1.3f);
+                    nextAttackTime = Time.time + 1.25f / attackRate;
+                    break;
+                case 3:
+                    enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
+                    break;
+                case 4:
+                    enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
+                    break;
+            }
+        }
     }
     protected void init()
     {
@@ -93,15 +154,18 @@ class enemy : Character
         }
     }
 
-    public void TakeDamage(float damage){
+    public void TakeDamage(float damage)
+    {
         currentHealth -= damage;
         enemyAnimator.SetTrigger("hit");
-        if(currentHealth <= 0){
+        if (currentHealth <= 0)
+        {
             Die();
         }
     }
 
-    protected void Die(){
+    protected void Die()
+    {
         enemyAnimator.SetBool("isDead", true);
         GetComponent<Collider2D>().enabled = false;
         enemyRigidBody.velocity = Vector2.zero;
@@ -109,6 +173,10 @@ class enemy : Character
     }
     private void OnDrawGizmosSelected()
     {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
         Gizmos.DrawWireSphere(transform.position, lineOFSite);
+        Gizmos.DrawWireSphere(transform.position, lineOfAttack);
     }
 }

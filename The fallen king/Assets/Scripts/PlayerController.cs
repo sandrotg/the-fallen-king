@@ -15,9 +15,6 @@ class PlayerController : Character
     public float attackrange = 0.5f;
     [SerializeField]
     private LayerMask enemyLayers;
-    [SerializeField]
-    float attackRate = 2f;
-    float nextAttackTime = 0f;
 
     // Start is called before the first frame update
 
@@ -29,7 +26,9 @@ class PlayerController : Character
     void Start()
     {
         animator.SetFloat(MOVING, 0);
+        currentHealth = baseHealth;
     }
+
 
     // Update is called once per frame
     void Update()
@@ -42,17 +41,17 @@ class PlayerController : Character
             if (Input.GetKeyDown(KeyCode.I))
             {
                 Attack1();
-                nextAttackTime = Time.time + 1f/attackRate;
+                nextAttackTime = Time.time + 1f / attackRate;
             }
             if (Input.GetKeyDown(KeyCode.J))
             {
                 Attack2();
-                nextAttackTime = Time.time + 1.25f/attackRate;
+                nextAttackTime = Time.time + 1.25f / attackRate;
             }
             if (Input.GetKeyDown(KeyCode.L))
             {
                 Attack3();
-                nextAttackTime = Time.time + 1.5f/attackRate;
+                nextAttackTime = Time.time + 1.5f / attackRate;
             }
         }
 
@@ -119,20 +118,20 @@ class PlayerController : Character
     void Attack2()
     {
         animator.SetTrigger("Attack2");
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange*1.1f, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange * 1.1f, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<enemy>().TakeDamage(baseDamage*1.25f);
+            enemy.GetComponent<enemy>().TakeDamage(baseDamage * 1.25f);
         }
     }
-    
+
     void Attack3()
     {
         animator.SetTrigger("Attack3");
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange*1.3f, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange * 1.3f, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<enemy>().TakeDamage(baseDamage*1.5f);
+            enemy.GetComponent<enemy>().TakeDamage(baseDamage * 1.5f);
         }
     }
     bool Block()
@@ -148,6 +147,24 @@ class PlayerController : Character
             return false;
         }
 
+    }
+
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        animator.SetTrigger("hit");
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    protected void Die()
+    {
+        animator.SetBool("isDead", true);
+        GetComponent<Collider2D>().enabled = false;
+        playerRigidBody.velocity = Vector2.zero;
+        this.enabled = false;
     }
     void OnDrawGizmosSelected()
     {

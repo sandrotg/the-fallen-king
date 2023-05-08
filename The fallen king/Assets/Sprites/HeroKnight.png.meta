@@ -1257,7 +1257,7 @@ TextureImporter:
         x: 312
         y: 167
         width: 55
-        height: 31
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1278,7 +1278,7 @@ TextureImporter:
         x: 412
         y: 167
         width: 56
-        height: 28
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1299,7 +1299,7 @@ TextureImporter:
         x: 512
         y: 167
         width: 70
-        height: 13
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1320,7 +1320,7 @@ TextureImporter:
         x: 612
         y: 167
         width: 70
-        height: 10
+        height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1341,7 +1341,7 @@ TextureImporter:
         x: 711
         y: 167
         width: 70
-        height: 6
+        height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2077,8 +2077,8 @@ TextureImporter:
       Block_2: 248517376
       Die_6: -480252832
       Attack_3-6: 1526185910
-      Attack_2-5: 2012537765
       Evade_6: -777999572
+      Attack_2-5: 2012537765
       HeroKnight_43: 1823038037
       Block_3: 541517986
       Run_4: -1858987510
