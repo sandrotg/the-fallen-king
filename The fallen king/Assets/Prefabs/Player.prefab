@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1346163505537260895}
   - component: {fileID: 1346163505537260894}
   - component: {fileID: 1346163505537260893}
-  - component: {fileID: 2133904675311043516}
   - component: {fileID: 97702261}
   - component: {fileID: 8724185144195663255}
-  m_Layer: 0
+  - component: {fileID: 631824508}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -109,32 +109,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &2133904675311043516
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346163505537260892}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.074060135, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.44, y: 0.4}
-    newSize: {x: 0.44, y: 0.4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.23427711, y: 0.4}
-  m_EdgeRadius: 0
 --- !u!114 &97702261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,13 +121,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebf895187e000642b61e7d8511b4600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseHealth: 100
+  baseDamage: 20
+  attackRate: 2
   speed: 4
   playerRigidBody: {fileID: 0}
   attackPoint: {fileID: 46612615052374876}
   attackrange: 0.5
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
 --- !u!50 &8724185144195663255
 Rigidbody2D:
   serializedVersion: 4
@@ -175,6 +152,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!70 &631824508
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346163505537260892}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.095483795, y: 0.071459785}
+  m_Size: {x: 0.19174315, y: 0.29072535}
+  m_Direction: 0
 --- !u!1 &2924696295523853372
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &294996581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 294996582}
+  m_Layer: 0
+  m_Name: PointAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &294996582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294996581}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.131, y: -0.052, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7341627402742747628}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &517958174051876493
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,7 +44,7 @@ GameObject:
   - component: {fileID: 5492833011280489424}
   - component: {fileID: 8758435482515166741}
   - component: {fileID: 3240042299814835480}
-  - component: {fileID: 4230227212305968460}
+  - component: {fileID: 212811102}
   m_Layer: 7
   m_Name: skelleton
   m_TagString: Untagged
@@ -32,7 +63,8 @@ Transform:
   m_LocalPosition: {x: 1.916, y: 0.3879, z: 0}
   m_LocalScale: {x: 4.2524505, y: 3.203205, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 294996582}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -145,7 +177,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.18247171, y: -0.06034168}
   m_Size: {x: 0.13182232, y: 0.38321698}
   m_Direction: 0
---- !u!114 &4230227212305968460
+--- !u!114 &212811102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,13 +186,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 517958174051876493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 201b4c19456c90c40af7d58092c8d13e, type: 3}
+  m_Script: {fileID: 11500000, guid: 67f80ed0b938c214cb38a2a558d085a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   baseHealth: 100
-  baseDamage: 0
+  baseDamage: 12
+  attackRate: 1
   enemySpeed: 1
   timeBetweenSteps: 2
   timeToMakeStep: 1.5
   directionToMakeStep: {x: 0, y: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
   lineOFSite: 5
+  lineOfAttack: 1.2
+  attackRange: 0.5
+  attackPoint: {fileID: 294996582}
+  numAttacks: 2
