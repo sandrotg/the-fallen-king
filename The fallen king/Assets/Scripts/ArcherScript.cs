@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ArcherScript : MonoBehaviour
 {
+    public GameObject Bullet;
     public GameObject player;
     private float LastShoot;
     // Start is called before the first frame update
@@ -16,8 +17,8 @@ public class ArcherScript : MonoBehaviour
    private void Update()
     {
         Vector3 direction = player.transform.position-transform.position;
-        if(direction.x>=0.0f) transform.localScale = new Vector3(1.0f,1.0f,1.0f);
-        else transform.localScale=new Vector3(-1.0f,1.0f,1.0f);
+        if(direction.x>=0.0f) transform.localScale = new Vector3(4.825575f,3.851821f,1f);
+        else transform.localScale=new Vector3(-4.825575f,3.851821f,1f);
 
         float distance = Mathf.Abs(player.transform.position.x-transform.position.x);
 
@@ -28,5 +29,11 @@ public class ArcherScript : MonoBehaviour
     }
     private void Shoot(){
         Debug.Log("shoot");
+        Vector3 direction;
+        if(transform.localScale.x==1.0f) direction = Vector3.right;
+        else direction = Vector3.left;
+
+        GameObject bullet= Instantiate(Bullet, transform.position + direction*0.1f, Quaternion.identity);
+        bullet.GetComponent<BulletScript>().SetDirection(direction);
     }
 }
