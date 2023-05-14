@@ -919,13 +919,13 @@ GameObject:
   m_Component:
   - component: {fileID: 945218924}
   - component: {fileID: 945218923}
-  - component: {fileID: 945218922}
   - component: {fileID: 945218921}
   - component: {fileID: 945218920}
+  - component: {fileID: 945218925}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Bullet
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -976,18 +976,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &945218922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945218919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6081825d6b244aa47bd1b69a0d2e8d45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &945218923
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1055,6 +1043,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &945218925
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945218919}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f402c86721dab714a9018d5b05d999a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &993702471
 GameObject:
   m_ObjectHideFlags: 0
