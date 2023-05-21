@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 class PlayerController : Character
 {
-
+    Vector3 startPosition;
+    [SerializeField] Image healthImage;
     public float speed = 4.0f;
     private const string vertical = "Vertical";
     private const string horizontal = "Horizontal";
@@ -25,15 +27,21 @@ class PlayerController : Character
     }
     void Start()
     {
+        animator.SetBool("isDead", false);
         animator.SetFloat(MOVING, 0);
         currentHealth = baseHealth;
+        startPosition = this.transform.position;
+    }
+
+    void startGame(){
+        this.transform.position = startPosition;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-
+        healthImage.fillAmount = currentHealth/ currentHealth;
         Move();
         animator.SetFloat(MOVING, isMoving());
         if (Time.time >= nextAttackTime)
