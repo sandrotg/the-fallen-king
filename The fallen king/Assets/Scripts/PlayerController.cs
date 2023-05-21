@@ -41,7 +41,7 @@ class PlayerController : Character
     // Update is called once per frame
     void Update()
     {
-        healthImage.fillAmount = currentHealth/ currentHealth;
+        //healthImage.fillAmount = currentHealth/ currentHealth;
         Move();
         animator.SetFloat(MOVING, isMoving());
         if (Time.time >= nextAttackTime)
