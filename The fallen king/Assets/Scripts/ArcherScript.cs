@@ -7,7 +7,10 @@ public class ArcherScript : MonoBehaviour
     public GameObject Bullet;
     public GameObject player;
     private float LastShoot;
-    // Start is called before the first frame update
+    
+    [SerializeField]
+    private Bullet BulletScript;
+    
     void Start()
     {
         
@@ -23,17 +26,17 @@ public class ArcherScript : MonoBehaviour
         float distance = Mathf.Abs(player.transform.position.x-transform.position.x);
 
         if(distance<1.0f && Time.time>LastShoot+0.25f){
-            Shoot();
+            //Shoot();
             LastShoot=Time.time;
         }
     }
-    private void Shoot(){
+    /*private void Shoot(){
         Debug.Log("shoot");
         Vector3 direction;
         if(transform.localScale.x==1.0f) direction = Vector3.right;
         else direction = Vector3.left;
 
         GameObject bullet= Instantiate(Bullet, transform.position + direction*0.1f, Quaternion.identity);
-        bullet.GetComponent<BulletScript>().SetDirection(direction);
-    }
+        bullet.GetComponent<Bullet>().SetDirection(direction);
+    }*/
 }
