@@ -29,7 +29,8 @@ class PlayerController : Character
     {
         animator.SetBool("isDead", false);
         animator.SetFloat(MOVING, 0);
-        currentHealth = baseHealth;
+        totalHealth = baseHealth;
+        currentHealth = totalHealth;
         startPosition = this.transform.position;
     }
 
@@ -41,7 +42,7 @@ class PlayerController : Character
     // Update is called once per frame
     void Update()
     {
-        //healthImage.fillAmount = currentHealth/ currentHealth;
+        healthImage.fillAmount = currentHealth/ totalHealth;
         Move();
         animator.SetFloat(MOVING, isMoving());
         if (Time.time >= nextAttackTime)
@@ -170,6 +171,7 @@ class PlayerController : Character
     protected void Die()
     {
         animator.SetBool("isDead", true);
+        healthImage.fillAmount = 0;
         GetComponent<Collider2D>().enabled = false;
         playerRigidBody.velocity = Vector2.zero;
         this.enabled = false;
