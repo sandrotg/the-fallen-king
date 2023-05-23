@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 212811102}
   m_Layer: 7
   m_Name: skelleton
-  m_TagString: Untagged
+  m_TagString: skelleton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,6 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHealth: 100
   baseDamage: 12
+  currentHealth: 0
   attackRate: 1
   enemySpeed: 1
   timeBetweenSteps: 2
@@ -204,3 +205,4 @@ MonoBehaviour:
   attackRange: 0.5
   attackPoint: {fileID: 294996582}
   numAttacks: 2
+  enemigo: {fileID: 517958174051876493}

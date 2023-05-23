@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 214904042}
   m_Layer: 7
   m_Name: Lancer
-  m_TagString: Enemy
+  m_TagString: lancer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,6 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHealth: 80
   baseDamage: 14
+  currentHealth: 0
   attackRate: 0.8
   enemySpeed: 1
   timeBetweenSteps: 2
@@ -204,3 +205,4 @@ MonoBehaviour:
   attackRange: 0.8
   attackPoint: {fileID: 1421124783}
   numAttacks: 2
+  enemigo: {fileID: 1221528105488248085}
