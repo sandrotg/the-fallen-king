@@ -24,6 +24,7 @@ public class Potions : MonoBehaviour
             if (collision.GetComponent<PlayerController>().GetCurrentHealth() < collision.GetComponent<PlayerController>().GetTotalHealth())
             {
                 collision.GetComponent<PlayerController>().SetPorcentCurrentHealth(healthToGive);
+                AudioManager.instance.PlayAudio(AudioManager.instance.getitem);
                 Destroy(gameObject);
             }
 

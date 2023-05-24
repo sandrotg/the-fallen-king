@@ -24,6 +24,8 @@ class enemy : Character
     protected const string Move = "isMoving";
     public GameObject enemigo;
     private string enemyTag;
+    public GameObject[] loot;
+
     
     void Start()
     {
@@ -183,6 +185,7 @@ class enemy : Character
         if (currentHealth <= 0)
         {
             Die();
+            Instantiate(loot[Random.Range(0, loot.Length)], transform.position, Quaternion.identity);
         }
     }
 
