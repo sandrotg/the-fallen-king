@@ -17,6 +17,9 @@ class PlayerController : Character
     public float attackrange = 0.5f;
     [SerializeField]
     private LayerMask enemyLayers;
+    public Vector3 PlayerPosition;
+    public GameDataController gameDataController;
+    public PlayerController instance;
 
     // Start is called before the first frame update
 
@@ -32,6 +35,14 @@ class PlayerController : Character
         totalHealth = baseHealth;
         currentHealth = totalHealth;
         startPosition = this.transform.position;
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void startGame(){
@@ -175,18 +186,37 @@ class PlayerController : Character
         }
     }
 
+    /*protected void Die()
+    {
+        GameDataController gameDataController = new GameDataController();
+        animator.SetBool("isDead", true);
+        //healthImage.fillAmount = 0;
+        gameDataController.LoadData();
+        GetComponent<Collider2D>().enabled = false;
+        playerRigidBody.velocity = Vector2.zero;
+        this.enabled = false;
+    }*/
+
     protected void Die()
     {
         animator.SetBool("isDead", true);
-        //healthImage.fillAmount = 0;
+        gameDataController.LoadData();
+        PlayerPosition = gameDataController.gameData.playerPosition;
         GetComponent<Collider2D>().enabled = false;
         playerRigidBody.velocity = Vector2.zero;
         this.enabled = false;
     }
+    
     void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackrange);
+    }
+
+    public void DataToSave()
+    {
+        //DataManager.instance.currentHealthData(currentHealth);
+        //currentHealth = PlayerPrefs.GetFloat("currentHealth", totalHealth);
     }
 }
