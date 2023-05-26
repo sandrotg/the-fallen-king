@@ -29,6 +29,11 @@ public class DataManager : MonoBehaviour
         PlayerPrefs.SetFloat("MusicVolume", value);
     }
 
+    public void currentHealthData(float value)
+    {
+        PlayerPrefs.SetFloat("currentHealth", value);
+    }
+
     void Update()
     {
         
