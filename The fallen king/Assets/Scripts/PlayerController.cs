@@ -17,11 +17,16 @@ class PlayerController : Character
     public float attackrange = 0.5f;
     [SerializeField]
     private LayerMask enemyLayers;
+    public static PlayerController instance;
 
     // Start is called before the first frame update
 
     void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
         animator = GetComponent<Animator>();
         playerRigidBody = GetComponent<Rigidbody2D>();
     }
@@ -29,12 +34,15 @@ class PlayerController : Character
     {
         animator.SetBool("isDead", false);
         animator.SetFloat(MOVING, 0);
-        totalHealth = baseHealth;
+        totalArmor = baseArmor + extraArmor;
+        totalHealth = baseHealth + totalArmor;
         currentHealth = totalHealth;
+        totalDamage = baseDamage + swordDamage;
         startPosition = this.transform.position;
     }
 
-    void startGame(){
+    void startGame()
+    {
         this.transform.position = startPosition;
     }
 
@@ -42,29 +50,32 @@ class PlayerController : Character
     // Update is called once per frame
     void Update()
     {
-        healthImage.fillAmount = currentHealth/ totalHealth;
-        Move();
-        animator.SetFloat(MOVING, isMoving());
-        if (Time.time >= nextAttackTime)
+        if (GameManager.instance.currentGameState == GameState.inGame)
         {
-            if (Input.GetKeyDown(KeyCode.I))
+            healthImage.fillAmount = currentHealth / totalHealth;
+            Move();
+            animator.SetFloat(MOVING, isMoving());
+            if (Time.time >= nextAttackTime)
             {
-                Attack1();
-                nextAttackTime = Time.time + 1f / attackRate;
+                if (Input.GetKeyDown(KeyCode.I))
+                {
+                    Attack1();
+                    nextAttackTime = Time.time + 1f / attackRate;
+                }
+                if (Input.GetKeyDown(KeyCode.J))
+                {
+                    Attack2();
+                    nextAttackTime = Time.time + 1.25f / attackRate;
+                }
+                if (Input.GetKeyDown(KeyCode.L))
+                {
+                    Attack3();
+                    nextAttackTime = Time.time + 1.5f / attackRate;
+                }
             }
-            if (Input.GetKeyDown(KeyCode.J))
-            {
-                Attack2();
-                nextAttackTime = Time.time + 1.25f / attackRate;
-            }
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                Attack3();
-                nextAttackTime = Time.time + 1.5f / attackRate;
-            }
-        }
 
-        animator.SetBool("block", Block());
+            animator.SetBool("block", Block());
+        }
 
     }
     void Move()
@@ -121,7 +132,7 @@ class PlayerController : Character
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<enemy>().TakeDamage(baseDamage);
+            enemy.GetComponent<enemy>().TakeDamage(totalDamage);
         }
     }
     void Attack2()
@@ -130,7 +141,7 @@ class PlayerController : Character
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange * 1.1f, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<enemy>().TakeDamage(baseDamage * 1.25f);
+            enemy.GetComponent<enemy>().TakeDamage(totalDamage * 1.25f);
         }
     }
 
@@ -140,7 +151,7 @@ class PlayerController : Character
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange * 1.3f, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<enemy>().TakeDamage(baseDamage * 1.5f);
+            enemy.GetComponent<enemy>().TakeDamage(totalDamage * 1.5f);
         }
     }
     bool Block()

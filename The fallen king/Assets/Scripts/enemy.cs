@@ -29,22 +29,25 @@ class enemy : Character
 
     void Update()
     {
-        distanceFromPlayer = Vector2.Distance(player.transform.position, transform.position);
-        if (distanceFromPlayer > lineOFSite)
+        if (GameManager.instance.currentGameState == GameState.inGame)
         {
-            move();
-        }
-        else
-        {
-            if (distanceFromPlayer > lineOfAttack)
+            distanceFromPlayer = Vector2.Distance(player.transform.position, transform.position);
+            if (distanceFromPlayer > lineOFSite)
             {
-                followPlayer();
+                move();
             }
             else
             {
-                if (Time.time >= nextAttackTime)
+                if (distanceFromPlayer > lineOfAttack)
                 {
-                    Attack(numAttacks);
+                    followPlayer();
+                }
+                else
+                {
+                    if (Time.time >= nextAttackTime)
+                    {
+                        Attack(numAttacks);
+                    }
                 }
             }
         }
@@ -115,13 +118,17 @@ class enemy : Character
                 case 1:
                     enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
                     player = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
-                    player.GetComponent<PlayerController>().TakeDamage(baseDamage);
+                    if(player != null){
+                        player.GetComponent<PlayerController>().TakeDamage(baseDamage);
+                    }
                     nextAttackTime = Time.time + 1f / attackRate;
                     break;
                 case 2:
                     enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
                     player = Physics2D.OverlapCircle(attackPoint.position, attackRange * 1.25f, playerLayer);
-                    player.GetComponent<PlayerController>().TakeDamage(baseDamage * 1.3f);
+                    if(player != null){
+                        player.GetComponent<PlayerController>().TakeDamage(baseDamage * 1.3f);
+                    }
                     nextAttackTime = Time.time + 1.25f / attackRate;
                     break;
                 case 3:
@@ -140,7 +147,8 @@ class enemy : Character
         timeBetweenStepsCounter = timeBetweenSteps * Random.Range(0.5f, 1.5f);
         timeToMakeStepCounter = timeToMakeStep * Random.Range(0.5f, 1.5f);
         player = GameObject.Find("Player");
-        currentHealth = baseHealth;
+        totalHealth = baseHealth + baseArmor;
+        currentHealth = totalHealth;
     }
     protected bool Moving()
     {

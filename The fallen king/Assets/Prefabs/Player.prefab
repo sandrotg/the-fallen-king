@@ -121,9 +121,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebf895187e000642b61e7d8511b4600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 100
-  baseDamage: 20
+  baseHealth: 200
+  baseArmor: 50
+  extraArmor: 0
+  totalArmor: 0
+  totalHealth: 0
+  baseDamage: 30
+  swordDamage: 0
+  totalDamage: 0
   attackRate: 2
+  healthImage: {fileID: 0}
   speed: 4
   playerRigidBody: {fileID: 0}
   attackPoint: {fileID: 46612615052374876}

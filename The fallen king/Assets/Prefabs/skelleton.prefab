@@ -190,7 +190,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseHealth: 100
+  baseArmor: 10
+  extraArmor: 0
   baseDamage: 12
+  swordDamage: 0
   attackRate: 1
   enemySpeed: 1
   timeBetweenSteps: 2

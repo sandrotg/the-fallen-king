@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8794013380559447923}
   - component: {fileID: 8794013380559447920}
   - component: {fileID: 8794013380559447921}
-  - component: {fileID: 8794013380559447934}
+  - component: {fileID: 1572436525}
   m_Layer: 8
   m_Name: watermelon
   m_TagString: Item
@@ -102,7 +102,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
---- !u!114 &8794013380559447934
+--- !u!114 &1572436525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8794013380559447935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0b25bdb93cbc984bace6b9d8f514811, type: 3}
+  m_Script: {fileID: 11500000, guid: 47f66131a5559aa449a2976034004be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthToGive: 9
+  itemType: 0
+  itemToAdd: {fileID: 329887831128908714, guid: e9f662dbf3179d344a26ba87091fbbc4, type: 3}
+  amountToAdd: 1

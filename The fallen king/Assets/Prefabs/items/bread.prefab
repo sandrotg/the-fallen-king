@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8753116282305248396}
   - component: {fileID: 8753116282305248399}
   - component: {fileID: 8753116282305248398}
-  - component: {fileID: 8753116282305248393}
+  - component: {fileID: 8629932396722440252}
   m_Layer: 8
   m_Name: bread
   m_TagString: Item
@@ -102,7 +102,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
---- !u!114 &8753116282305248393
+--- !u!114 &8629932396722440252
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8753116282305248392}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0b25bdb93cbc984bace6b9d8f514811, type: 3}
+  m_Script: {fileID: 11500000, guid: 47f66131a5559aa449a2976034004be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthToGive: 8
+  itemToAdd: {fileID: 3136219035792129289, guid: 4b1386759b18f184a8c67057bf7c5c50, type: 3}
+  amountToAdd: 1
