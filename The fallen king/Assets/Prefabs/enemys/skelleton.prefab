@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 212811102}
   m_Layer: 7
   m_Name: skelleton
-  m_TagString: skelleton
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,8 +60,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517958174051876493}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.4556, y: 0.9502, z: 0}
-  m_LocalScale: {x: 2.3830733, y: 2.131733, z: 1}
+  m_LocalPosition: {x: 1.916, y: 0.3879, z: 0}
+  m_LocalScale: {x: 4.2524505, y: 3.203205, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 294996582}
@@ -190,8 +190,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseHealth: 100
+  baseArmor: 10
+  extraArmor: 0
   baseDamage: 12
-  currentHealth: 0
+  swordDamage: 0
   attackRate: 1
   enemySpeed: 1
   timeBetweenSteps: 2
@@ -205,5 +207,3 @@ MonoBehaviour:
   attackRange: 0.5
   attackPoint: {fileID: 294996582}
   numAttacks: 2
-  enemigo: {fileID: 517958174051876493}
-  loot: []

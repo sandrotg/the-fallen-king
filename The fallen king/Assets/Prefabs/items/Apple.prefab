@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5411961319567641754}
   - component: {fileID: 5411961319567641757}
   - component: {fileID: 5411961319567641756}
-  - component: {fileID: 5411961319567641759}
+  - component: {fileID: 9019401624532437889}
   m_Layer: 8
   m_Name: Apple
   m_TagString: Item
@@ -102,7 +102,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
---- !u!114 &5411961319567641759
+--- !u!114 &9019401624532437889
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5411961319567641758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0b25bdb93cbc984bace6b9d8f514811, type: 3}
+  m_Script: {fileID: 11500000, guid: 47f66131a5559aa449a2976034004be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthToGive: 6
+  itemToAdd: {fileID: 7382041565562746990, guid: eb6c13dc41aae2e44ad4d23c55ac1d1c, type: 3}
+  amountToAdd: 1

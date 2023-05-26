@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 485564167333353939}
   - component: {fileID: 485564167333353938}
-  - component: {fileID: 485564167333353937}
   - component: {fileID: 485564167333353940}
+  - component: {fileID: 8714493518434060213}
   m_Layer: 8
   m_Name: HealthPotion3
   m_TagString: Item
@@ -86,19 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &485564167333353937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485564167333353936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0afb8f4d2fc40034a93d8c84cfb92cd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthToGive: 20
 --- !u!58 &485564167333353940
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -112,6 +99,20 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.041552544}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.7783117
+  m_Radius: 0.25
+--- !u!114 &8714493518434060213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485564167333353936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f66131a5559aa449a2976034004be6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToAdd: {fileID: 8081831881082743129, guid: 72de3690a48afbf4194d6976e7b47833, type: 3}
+  amountToAdd: 1

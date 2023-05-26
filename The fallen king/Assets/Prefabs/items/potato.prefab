@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7656354717817042552}
   - component: {fileID: 7656354717817042559}
   - component: {fileID: 7656354717817042558}
-  - component: {fileID: 7656354717817042557}
+  - component: {fileID: -4785848247167828327}
   m_Layer: 8
   m_Name: potato
   m_TagString: Item
@@ -102,7 +102,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
---- !u!114 &7656354717817042557
+--- !u!114 &-4785848247167828327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7656354717817042556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0b25bdb93cbc984bace6b9d8f514811, type: 3}
+  m_Script: {fileID: 11500000, guid: 47f66131a5559aa449a2976034004be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthToGive: 6
+  itemToAdd: {fileID: 7823399538909745277, guid: c2608abe8dd0dc14db52fc5bde77e5a5, type: 3}
+  amountToAdd: 1

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 class enemy : Character
 {
@@ -23,46 +22,31 @@ class enemy : Character
     [SerializeField] protected int numAttacks;
     protected float distanceFromPlayer;
     protected const string Move = "isMoving";
-    public GameObject enemigo;
-    private string enemyTag;
-    public GameObject[] loot;
-
-    
     void Start()
     {
         init();
-        enemyTag = enemigo.tag;
     }
 
     void Update()
     {
-        distanceFromPlayer = Vector2.Distance(player.transform.position, transform.position);
-        if (distanceFromPlayer > lineOFSite)
+        if (GameManager.instance.currentGameState == GameState.inGame)
         {
-            move();
-        }
-        else
-        {
-            if (distanceFromPlayer > lineOfAttack)
+            distanceFromPlayer = Vector2.Distance(player.transform.position, transform.position);
+            if (distanceFromPlayer > lineOFSite)
             {
-                followPlayer();
+                move();
             }
             else
             {
-                if (Time.time >= nextAttackTime)
+                if (distanceFromPlayer > lineOfAttack)
                 {
-                    Attack(numAttacks);
-                    if (enemyTag == "skelleton")
+                    followPlayer();
+                }
+                else
+                {
+                    if (Time.time >= nextAttackTime)
                     {
-                        AudioManager.instance.PlayAudio(AudioManager.instance.skelsword);
-                    }
-                    else if (enemyTag == "lancer")
-                    {
-                        AudioManager.instance.PlayAudio(AudioManager.instance.skellancer);
-                    }
-                    else if (enemyTag == "butcher")
-                    {
-                        AudioManager.instance.PlayAudio(AudioManager.instance.skelbutcher);
+                        Attack(numAttacks);
                     }
                 }
             }
@@ -89,7 +73,6 @@ class enemy : Character
             if (timeBetweenStepsCounter < 0)
             {
                 isMoving = true;
-                AudioManager.instance.PlayAudio(AudioManager.instance.skelwalk);
                 timeToMakeStepCounter = timeBetweenSteps;
                 directionToMakeStep = new Vector2(Random.Range(-1, 2), Random.Range(-1, 2)) * enemySpeed;
             }
@@ -115,12 +98,10 @@ class enemy : Character
             if (transform.position.x < player.transform.position.x)
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
-                AudioManager.instance.PlayAudio(AudioManager.instance.skelwalk);
             }
             if (transform.position.x > player.transform.position.x)
             {
                 transform.rotation = Quaternion.Euler(0, 180, 0);
-                AudioManager.instance.PlayAudio(AudioManager.instance.skelwalk);
             }
         }
 
@@ -129,31 +110,33 @@ class enemy : Character
     protected void Attack(int numAttacks)
     {
         Collider2D player;
+        if (distanceFromPlayer <= lineOfAttack)
         {
-            if (distanceFromPlayer <= lineOfAttack)
+            int attackGenerator = Random.Range(1, numAttacks + 1);
+            switch (attackGenerator)
             {
-                int attackGenerator = Random.Range(1, numAttacks + 1);
-                switch (attackGenerator)
-                {
-                    case 1:
-                        enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
-                        player = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
+                case 1:
+                    enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
+                    player = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
+                    if(player != null){
                         player.GetComponent<PlayerController>().TakeDamage(baseDamage);
-                        nextAttackTime = Time.time + 1f / attackRate;
-                        break;
-                    case 2:
-                        enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
-                        player = Physics2D.OverlapCircle(attackPoint.position, attackRange * 1.25f, playerLayer);
+                    }
+                    nextAttackTime = Time.time + 1f / attackRate;
+                    break;
+                case 2:
+                    enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
+                    player = Physics2D.OverlapCircle(attackPoint.position, attackRange * 1.25f, playerLayer);
+                    if(player != null){
                         player.GetComponent<PlayerController>().TakeDamage(baseDamage * 1.3f);
-                        nextAttackTime = Time.time + 1.25f / attackRate;
-                        break;
-                    case 3:
-                        enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
-                        break;
-                    case 4:
-                        enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
-                        break;
-                }
+                    }
+                    nextAttackTime = Time.time + 1.25f / attackRate;
+                    break;
+                case 3:
+                    enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
+                    break;
+                case 4:
+                    enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
+                    break;
             }
         }
     }
@@ -164,7 +147,8 @@ class enemy : Character
         timeBetweenStepsCounter = timeBetweenSteps * Random.Range(0.5f, 1.5f);
         timeToMakeStepCounter = timeToMakeStep * Random.Range(0.5f, 1.5f);
         player = GameObject.Find("Player");
-        currentHealth = baseHealth;
+        totalHealth = baseHealth + baseArmor;
+        currentHealth = totalHealth;
     }
     protected bool Moving()
     {
@@ -181,12 +165,10 @@ class enemy : Character
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        AudioManager.instance.PlayAudio(AudioManager.instance.skelhit);
         enemyAnimator.SetTrigger("hit");
         if (currentHealth <= 0)
         {
             Die();
-            Instantiate(loot[Random.Range(0, loot.Length)], transform.position, Quaternion.identity);
         }
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9096014108079091474}
   - component: {fileID: 9096014108079091473}
   - component: {fileID: 9096014108079091472}
-  - component: {fileID: 9096014108079091487}
+  - component: {fileID: -3959539824172830267}
   m_Layer: 8
   m_Name: fish
   m_TagString: Item
@@ -102,7 +102,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
---- !u!114 &9096014108079091487
+--- !u!114 &-3959539824172830267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 9096014108079091486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0b25bdb93cbc984bace6b9d8f514811, type: 3}
+  m_Script: {fileID: 11500000, guid: 47f66131a5559aa449a2976034004be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthToGive: 13
+  itemToAdd: {fileID: 4895681278480402770, guid: 830e63cab764ac44da740709a9139220, type: 3}
+  amountToAdd: 1

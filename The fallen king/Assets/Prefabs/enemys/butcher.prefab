@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 2096401141}
   m_Layer: 7
   m_Name: butcher
-  m_TagString: butcher
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,8 +60,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8542937474267550247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.259, y: 2.4145, z: 0}
-  m_LocalScale: {x: 1.7758292, y: 1.7226955, z: 1}
+  m_LocalPosition: {x: 2.11, y: 1.59, z: 0}
+  m_LocalScale: {x: 4.3589325, y: 3.2565134, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1862723750}
@@ -190,8 +190,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseHealth: 120
+  baseArmor: 35
+  extraArmor: 0
   baseDamage: 18
-  currentHealth: 0
+  swordDamage: 0
   attackRate: 0.6
   enemySpeed: 1
   timeBetweenSteps: 2
@@ -205,5 +207,3 @@ MonoBehaviour:
   attackRange: 0.5
   attackPoint: {fileID: 1862723750}
   numAttacks: 2
-  enemigo: {fileID: 8542937474267550247}
-  loot: []

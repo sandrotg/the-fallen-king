@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 214904042}
   m_Layer: 7
   m_Name: Lancer
-  m_TagString: lancer
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,8 +60,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221528105488248085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.0781, y: 1.327, z: 0}
-  m_LocalScale: {x: 1.7514225, y: 1.9827646, z: 1}
+  m_LocalPosition: {x: 3.8571, y: 0.6354, z: 0}
+  m_LocalScale: {x: 3.218935, y: 3.2691913, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1421124783}
@@ -190,8 +190,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseHealth: 80
+  baseArmor: 20
+  extraArmor: 0
   baseDamage: 14
-  currentHealth: 0
+  swordDamage: 0
   attackRate: 0.8
   enemySpeed: 1
   timeBetweenSteps: 2
@@ -205,5 +207,3 @@ MonoBehaviour:
   attackRange: 0.8
   attackPoint: {fileID: 1421124783}
   numAttacks: 2
-  enemigo: {fileID: 1221528105488248085}
-  loot: []

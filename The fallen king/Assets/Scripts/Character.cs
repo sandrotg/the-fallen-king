@@ -6,10 +6,18 @@ abstract class Character : MonoBehaviour
 {
     [SerializeField] protected float baseHealth;
 
-    protected float totalHealth;
+    [SerializeField] protected float baseArmor;
+
+    public float extraArmor = 0f;
+
+    [SerializeField] protected float totalArmor;
+
+    [SerializeField] protected float totalHealth;
     [SerializeField] protected float baseDamage;
-    protected float totalDamage;
-    [SerializeField]protected float currentHealth;
+
+    public float swordDamage = 0f;
+    [SerializeField] protected float totalDamage;
+    protected float currentHealth;
     protected float nextAttackTime = 0f;
     [SerializeField] protected float attackRate = 2f;
 
@@ -32,6 +40,14 @@ abstract class Character : MonoBehaviour
 
     public float GetTotalHealth(){
         return totalHealth;
+    }
+
+    public void AddSwordDamage(){
+        totalDamage = baseDamage + swordDamage;
+    }
+    public void AddExtraArmor(){
+        totalArmor = baseArmor + extraArmor;
+        totalHealth = baseHealth + totalArmor;
     }
 
 }
