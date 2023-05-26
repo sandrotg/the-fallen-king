@@ -6,7 +6,7 @@ using UnityEngine.UI;
 class PlayerController : Character
 {
     Vector3 startPosition;
-    [SerializeField] Image healthImage;
+    //[SerializeField] Image healthImage;
     public float speed = 4.0f;
     private const string vertical = "Vertical";
     private const string horizontal = "Horizontal";
@@ -42,7 +42,7 @@ class PlayerController : Character
     // Update is called once per frame
     void Update()
     {
-        healthImage.fillAmount = currentHealth/ totalHealth;
+        //healthImage.fillAmount = currentHealth/ totalHealth;
         Move();
         animator.SetFloat(MOVING, isMoving());
         if (Time.time >= nextAttackTime)
@@ -50,17 +50,24 @@ class PlayerController : Character
             if (Input.GetKeyDown(KeyCode.I))
             {
                 Attack1();
+                AudioManager.instance.PlayAudio(AudioManager.instance.player1);
                 nextAttackTime = Time.time + 1f / attackRate;
             }
             if (Input.GetKeyDown(KeyCode.J))
             {
                 Attack2();
+                AudioManager.instance.PlayAudio(AudioManager.instance.player2);
                 nextAttackTime = Time.time + 1.25f / attackRate;
             }
             if (Input.GetKeyDown(KeyCode.L))
             {
                 Attack3();
+                AudioManager.instance.PlayAudio(AudioManager.instance.player3);
                 nextAttackTime = Time.time + 1.5f / attackRate;
+            }
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                AudioManager.instance.PlayAudio(AudioManager.instance.playershield);
             }
         }
 
@@ -171,7 +178,7 @@ class PlayerController : Character
     protected void Die()
     {
         animator.SetBool("isDead", true);
-        healthImage.fillAmount = 0;
+        //healthImage.fillAmount = 0;
         GetComponent<Collider2D>().enabled = false;
         playerRigidBody.velocity = Vector2.zero;
         this.enabled = false;

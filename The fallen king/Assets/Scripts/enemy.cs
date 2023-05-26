@@ -22,9 +22,15 @@ class enemy : Character
     [SerializeField] protected int numAttacks;
     protected float distanceFromPlayer;
     protected const string Move = "isMoving";
+    public GameObject enemigo;
+    private string enemyTag;
+    public GameObject[] loot;
+
+    
     void Start()
     {
         init();
+        enemyTag = enemigo.tag;
     }
 
     void Update()
@@ -45,6 +51,18 @@ class enemy : Character
                 if (Time.time >= nextAttackTime)
                 {
                     Attack(numAttacks);
+                    if (enemyTag == "skelleton")
+                    {
+                        AudioManager.instance.PlayAudio(AudioManager.instance.skelsword);
+                    }
+                    else if (enemyTag == "lancer")
+                    {
+                        AudioManager.instance.PlayAudio(AudioManager.instance.skellancer);
+                    }
+                    else if (enemyTag == "butcher")
+                    {
+                        AudioManager.instance.PlayAudio(AudioManager.instance.skelbutcher);
+                    }
                 }
             }
         }
@@ -70,6 +88,7 @@ class enemy : Character
             if (timeBetweenStepsCounter < 0)
             {
                 isMoving = true;
+                AudioManager.instance.PlayAudio(AudioManager.instance.skelwalk);
                 timeToMakeStepCounter = timeBetweenSteps;
                 directionToMakeStep = new Vector2(Random.Range(-1, 2), Random.Range(-1, 2)) * enemySpeed;
             }
@@ -95,10 +114,12 @@ class enemy : Character
             if (transform.position.x < player.transform.position.x)
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
+                AudioManager.instance.PlayAudio(AudioManager.instance.skelwalk);
             }
             if (transform.position.x > player.transform.position.x)
             {
                 transform.rotation = Quaternion.Euler(0, 180, 0);
+                AudioManager.instance.PlayAudio(AudioManager.instance.skelwalk);
             }
         }
 
@@ -107,29 +128,31 @@ class enemy : Character
     protected void Attack(int numAttacks)
     {
         Collider2D player;
-        if (distanceFromPlayer <= lineOfAttack)
         {
-            int attackGenerator = Random.Range(1, numAttacks + 1);
-            switch (attackGenerator)
+            if (distanceFromPlayer <= lineOfAttack)
             {
-                case 1:
-                    enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
-                    player = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
-                    player.GetComponent<PlayerController>().TakeDamage(baseDamage);
-                    nextAttackTime = Time.time + 1f / attackRate;
-                    break;
-                case 2:
-                    enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
-                    player = Physics2D.OverlapCircle(attackPoint.position, attackRange * 1.25f, playerLayer);
-                    player.GetComponent<PlayerController>().TakeDamage(baseDamage * 1.3f);
-                    nextAttackTime = Time.time + 1.25f / attackRate;
-                    break;
-                case 3:
-                    enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
-                    break;
-                case 4:
-                    enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
-                    break;
+                int attackGenerator = Random.Range(1, numAttacks + 1);
+                switch (attackGenerator)
+                {
+                    case 1:
+                        enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
+                        player = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
+                        player.GetComponent<PlayerController>().TakeDamage(baseDamage);
+                        nextAttackTime = Time.time + 1f / attackRate;
+                        break;
+                    case 2:
+                        enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
+                        player = Physics2D.OverlapCircle(attackPoint.position, attackRange * 1.25f, playerLayer);
+                        player.GetComponent<PlayerController>().TakeDamage(baseDamage * 1.3f);
+                        nextAttackTime = Time.time + 1.25f / attackRate;
+                        break;
+                    case 3:
+                        enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
+                        break;
+                    case 4:
+                        enemyAnimator.SetTrigger("attack" + string.Concat(attackGenerator));
+                        break;
+                }
             }
         }
     }
@@ -157,10 +180,12 @@ class enemy : Character
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        AudioManager.instance.PlayAudio(AudioManager.instance.skelhit);
         enemyAnimator.SetTrigger("hit");
         if (currentHealth <= 0)
         {
             Die();
+            Instantiate(loot[Random.Range(0, loot.Length)], transform.position, Quaternion.identity);
         }
     }
 

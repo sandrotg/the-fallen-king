@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 2096401141}
   m_Layer: 7
   m_Name: butcher
-  m_TagString: Untagged
+  m_TagString: butcher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,6 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHealth: 120
   baseDamage: 18
+  currentHealth: 0
   attackRate: 0.6
   enemySpeed: 1
   timeBetweenSteps: 2
@@ -204,3 +205,4 @@ MonoBehaviour:
   attackRange: 0.5
   attackPoint: {fileID: 1862723750}
   numAttacks: 2
+  enemigo: {fileID: 8542937474267550247}

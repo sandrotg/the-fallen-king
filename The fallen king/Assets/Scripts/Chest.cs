@@ -12,7 +12,6 @@ public class Chest : MonoBehaviour
     void Start()
     {
         myAnim = GetComponent<Animator>();
-        myAnim.enabled = false;
         myCollider = GetComponent<Collider2D>();
     }
 
@@ -22,8 +21,8 @@ public class Chest : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                myAnim.enabled = true;
-                myAnim.Play("Open");
+                myAnim.SetBool("opened", true);
+                AudioManager.instance.PlayAudio(AudioManager.instance.cofre);
                 StartCoroutine(GetChestItem());
                 myCollider.enabled = false;
             }

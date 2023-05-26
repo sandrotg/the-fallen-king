@@ -21,6 +21,7 @@ public class Food : MonoBehaviour
          if (collision.CompareTag("Player")){
              if (collision.GetComponent<PlayerController>().GetCurrentHealth() < collision.GetComponent<PlayerController>().GetTotalHealth()){
                 collision.GetComponent<PlayerController>().SetSumCurrentHealth(healthToGive);
+                AudioManager.instance.PlayAudio(AudioManager.instance.getitem);
                 Destroy(gameObject);
              }
          }
