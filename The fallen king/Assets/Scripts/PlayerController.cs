@@ -31,6 +31,7 @@ class PlayerController : Character
         animator.SetFloat(MOVING, 0);
         totalHealth = baseHealth;
         currentHealth = totalHealth;
+        currentHealth = PlayerPrefs.GetFloat("currentHealth", totalHealth);
         startPosition = this.transform.position;
     }
 
@@ -188,5 +189,20 @@ class PlayerController : Character
         if (attackPoint == null)
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackrange);
+    }
+
+    public void DataToSave()
+    {
+        DataManager.instance.currentHealthData(currentHealth);
+        currentHealth = PlayerPrefs.GetFloat("currentHealth", totalHealth);
+    }
+
+    public void SavePlayerPosition()
+    {
+        Vector3 playerPosition = transform.position;
+        PlayerPrefs.SetFloat("PlayerPositionX", playerPosition.x);
+        PlayerPrefs.SetFloat("PlayerPositionY", playerPosition.y);
+        PlayerPrefs.SetFloat("PlayerPositionZ", playerPosition.z);
+        PlayerPrefs.Save();
     }
 }
