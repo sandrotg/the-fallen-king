@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 
 [System.Serializable]
-public class GameData
+public class GameDatas
 {
     public Vector3 playerPosition;
 }
@@ -13,7 +13,7 @@ public class GameDataController : MonoBehaviour
 {
     public GameObject player;
     public string GameDataFiles;
-    public GameData gameData;
+    public GameDatas gameData;
     private float healthsaved;
 
     private void Awake()
@@ -39,7 +39,7 @@ public class GameDataController : MonoBehaviour
 
     public void SaveData()
     {
-        gameData = new GameData()
+        gameData = new GameDatas()
         {
             playerPosition = player.transform.position
         };
@@ -55,7 +55,7 @@ public class GameDataController : MonoBehaviour
         if (File.Exists(GameDataFiles))
         {
             string jsonString = File.ReadAllText(GameDataFiles);
-            GameData loadedData = JsonUtility.FromJson<GameData>(jsonString);
+            GameDatas loadedData = JsonUtility.FromJson<GameDatas>(jsonString);
             gameData.playerPosition = loadedData.playerPosition;
             player.transform.position = gameData.playerPosition;
             Debug.Log("Player's position: " + gameData.playerPosition);
