@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// sirve porqueria 
 public class ConsumirItem : MonoBehaviour
 {
     public int ID;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+// sirve porqueria 
 public class Inventory : MonoBehaviour
 {
     public List<GameObject> slots = new List<GameObject>();

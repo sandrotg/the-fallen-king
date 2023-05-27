@@ -17,6 +17,7 @@ class PlayerController : Character
     public float attackrange = 0.5f;
     [SerializeField]
     private LayerMask enemyLayers;
+    private float numBlocks;
     public static PlayerController instance;
 
     // Start is called before the first frame update
