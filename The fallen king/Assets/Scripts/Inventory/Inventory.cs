@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour
         if (itemList != null)
         {
 
-            DataToInventory();
+            //DataToInventory();
         }
     }
 
@@ -131,7 +131,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void InventoryToData()
+    /*public void InventoryToData()
     {
         for (int i = 0; i < slots.Count; i++)
         {
@@ -139,9 +139,9 @@ public class Inventory : MonoBehaviour
             {
                 if (!GameData.instance.saveData.goToAddId.Contains(slots[i].GetComponentInChildren<ConsumirItem>().ID))
                 {
-                    GameData.instance.saveData.goToAddId.Add(slots[i].GetComponentInChildren<ConsumirItem>().ID);
-                    GameData.instance.saveData.inventoryItemsName.Add(slots[i].GetComponentInChildren<ConsumirItem>().name);
-                    GameData.instance.saveData.inventoryItemsAmount.Add(inventoryItems[slots[i].GetComponentInChildren<ConsumirItem>().name]);
+                    //GameData.instance.saveData.goToAddId.Add(slots[i].GetComponentInChildren<ConsumirItem>().ID);
+                    //GameData.instance.saveData.inventoryItemsName.Add(slots[i].GetComponentInChildren<ConsumirItem>().name);
+                    //GameData.instance.saveData.inventoryItemsAmount.Add(inventoryItems[slots[i].GetComponentInChildren<ConsumirItem>().name]);
                 }
             }
         }
@@ -160,5 +160,5 @@ public class Inventory : MonoBehaviour
             }
 
         }
-    }
+    }*/
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 class PlayerController : Character
 {
     Vector3 startPosition;
-    //[SerializeField] Image healthImage;
+    [SerializeField] Image healthImage;
     public float speed = 4.0f;
     private const string vertical = "Vertical";
     private const string horizontal = "Horizontal";
@@ -19,7 +19,7 @@ class PlayerController : Character
     private LayerMask enemyLayers;
     public Vector3 PlayerPosition;
     public GameDataController gameDataController;
-    public PlayerController instance;
+    public static PlayerController instance;
 
     // Start is called before the first frame update
 
@@ -32,16 +32,14 @@ class PlayerController : Character
     {
         animator.SetBool("isDead", false);
         animator.SetFloat(MOVING, 0);
-        totalHealth = baseHealth;
+        totalArmor = baseArmor + extraArmor;
+        totalHealth = baseHealth + totalArmor;
         currentHealth = totalHealth;
+        totalDamage = baseDamage + swordDamage;
         startPosition = this.transform.position;
         if (instance == null)
         {
             instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
         }
     }
 
@@ -53,7 +51,8 @@ class PlayerController : Character
     // Update is called once per frame
     void Update()
     {
-        //healthImage.fillAmount = currentHealth/ totalHealth;
+        
+        healthImage.fillAmount = currentHealth/ totalHealth;
         Move();
         animator.SetFloat(MOVING, isMoving());
         if (Time.time >= nextAttackTime)
@@ -139,7 +138,7 @@ class PlayerController : Character
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<enemy>().TakeDamage(baseDamage);
+            enemy.GetComponent<enemy>().TakeDamage(totalDamage);
         }
     }
     void Attack2()
@@ -148,7 +147,7 @@ class PlayerController : Character
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange * 1.1f, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<enemy>().TakeDamage(baseDamage * 1.25f);
+            enemy.GetComponent<enemy>().TakeDamage(totalDamage * 1.25f);
         }
     }
 
@@ -158,7 +157,7 @@ class PlayerController : Character
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange * 1.3f, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<enemy>().TakeDamage(baseDamage * 1.5f);
+            enemy.GetComponent<enemy>().TakeDamage(totalDamage * 1.5f);
         }
     }
     bool Block()
@@ -199,12 +198,13 @@ class PlayerController : Character
 
     protected void Die()
     {
-        animator.SetBool("isDead", true);
+        //animator.SetBool("isDead", true);
         gameDataController.LoadData();
+        currentHealth = totalHealth;
         PlayerPosition = gameDataController.gameData.playerPosition;
-        GetComponent<Collider2D>().enabled = false;
-        playerRigidBody.velocity = Vector2.zero;
-        this.enabled = false;
+        //GetComponent<Collider2D>().enabled = false;
+        //playerRigidBody.velocity = Vector2.zero;
+        //this.enabled = false;
     }
     
     void OnDrawGizmosSelected()
@@ -212,11 +212,5 @@ class PlayerController : Character
         if (attackPoint == null)
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackrange);
-    }
-
-    public void DataToSave()
-    {
-        //DataManager.instance.currentHealthData(currentHealth);
-        //currentHealth = PlayerPrefs.GetFloat("currentHealth", totalHealth);
     }
 }

@@ -17,7 +17,7 @@ abstract class Character : MonoBehaviour
 
     public float swordDamage = 0f;
     [SerializeField] protected float totalDamage;
-    protected float currentHealth;
+    public float currentHealth;
     protected float nextAttackTime = 0f;
     [SerializeField] protected float attackRate = 2f;
 

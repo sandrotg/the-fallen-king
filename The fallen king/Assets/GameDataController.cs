@@ -14,6 +14,7 @@ public class GameDataController : MonoBehaviour
     public GameObject player;
     public string GameDataFiles;
     public GameData gameData;
+    private float healthsaved;
 
     private void Awake()
     {
@@ -26,10 +27,13 @@ public class GameDataController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             SaveData();
+            healthsaved = player.GetComponent<PlayerController>().currentHealth;
+            Debug.Log("Player's health: " + healthsaved);
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
             LoadData();
+            player.GetComponent<PlayerController>().currentHealth = healthsaved;
         }
     }
 

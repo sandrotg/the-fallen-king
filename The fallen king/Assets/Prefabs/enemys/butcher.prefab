@@ -106,8 +106,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 217064499
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 19a74ba044548304eb9d3ba9787e2d4b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -189,11 +189,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f80ed0b938c214cb38a2a558d085a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 120
-  baseArmor: 35
+  baseHealth: 250
+  baseArmor: 60
   extraArmor: 0
-  baseDamage: 18
+  totalArmor: 0
+  totalHealth: 0
+  baseDamage: 45
   swordDamage: 0
+  totalDamage: 0
+  currentHealth: 0
   attackRate: 0.6
   enemySpeed: 1
   timeBetweenSteps: 2
