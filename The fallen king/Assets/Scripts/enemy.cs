@@ -12,7 +12,7 @@ class enemy : Character
     [SerializeField] protected float timeToMakeStep;
     protected float timeToMakeStepCounter;
     [SerializeField] protected Vector2 directionToMakeStep;
-    protected Animator enemyAnimator;
+    public Animator enemyAnimator;
     protected GameObject player;
     [SerializeField] protected LayerMask playerLayer;
     [SerializeField] protected float lineOFSite;
@@ -29,6 +29,10 @@ class enemy : Character
 
     void Update()
     {
+        if (currentHealth > 0)
+        {
+            enemyAnimator.SetBool("isDead", false);
+        }
         if (GameManager.instance.currentGameState == GameState.inGame)
         {
             distanceFromPlayer = Vector2.Distance(player.transform.position, transform.position);
@@ -165,19 +169,33 @@ class enemy : Character
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        if (currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
         enemyAnimator.SetTrigger("hit");
-        if (currentHealth <= 0)
+        if (currentHealth == 0)
         {
             Die();
         }
     }
 
-    protected void Die()
+    public void Die()
     {
-        enemyAnimator.SetBool("isDead", true);
-        GetComponent<Collider2D>().enabled = false;
-        enemyRigidBody.velocity = Vector2.zero;
-        this.enabled = false;
+        if(currentHealth == 0)
+        {
+            enemyAnimator.SetBool("isDead", true);
+            GetComponent<Collider2D>().enabled = false;
+            enemyRigidBody.velocity = Vector2.zero;
+            this.enabled = false;
+        }
+        else
+        {
+            enemyAnimator.SetBool("isDead", false);
+            GetComponent<Collider2D>().enabled = true;
+            enemyRigidBody.velocity = directionToMakeStep;;
+            this.enabled = true;
+        }
     }
     private void OnDrawGizmosSelected()
     {
