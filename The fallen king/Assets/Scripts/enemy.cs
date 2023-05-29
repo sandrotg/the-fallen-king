@@ -186,6 +186,7 @@ class enemy : Character
         {
             enemyAnimator.SetBool("isDead", true);
             GetComponent<Collider2D>().enabled = false;
+            PlayerController.instance.GetComponent<LevelController>().AddExperience(experienceToAdd);
             enemyRigidBody.velocity = Vector2.zero;
             this.enabled = false;
         }
