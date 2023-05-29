@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 212811102}
   m_Layer: 7
   m_Name: skelleton
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 517958174051876493}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.916, y: 0.3879, z: 0}
-  m_LocalScale: {x: 4.2524505, y: 3.203205, z: 1}
+  m_LocalScale: {x: 3.0217915, y: 2.177859, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 294996582}
@@ -174,8 +174,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0053799967, y: -0.02570491}
-  m_Size: {x: 0.13877979, y: 0.4012956}
+  m_Offset: {x: 0.0018994936, y: -0.025039196}
+  m_Size: {x: 0.124731235, y: 0.38681746}
   m_Direction: 0
 --- !u!114 &212811102
 MonoBehaviour:
@@ -192,8 +192,12 @@ MonoBehaviour:
   baseHealth: 100
   baseArmor: 10
   extraArmor: 0
+  totalArmor: 0
+  totalHealth: 0
   baseDamage: 12
   swordDamage: 0
+  totalDamage: 0
+  currentHealth: 0
   attackRate: 1
   enemySpeed: 1
   timeBetweenSteps: 2
@@ -207,3 +211,4 @@ MonoBehaviour:
   attackRange: 0.5
   attackPoint: {fileID: 294996582}
   numAttacks: 2
+  experienceToAdd: 1

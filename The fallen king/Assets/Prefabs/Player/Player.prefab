@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 97702261}
   - component: {fileID: 8724185144195663255}
   - component: {fileID: 631824508}
+  - component: {fileID: 5075799972465034569}
+  - component: {fileID: 616107410}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -30,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1346163505537260892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.9, y: -0.96, z: 0}
-  m_LocalScale: {x: 4.1919527, y: 4.7610493, z: 1}
+  m_LocalScale: {x: 2.9301748, y: 3.5774524, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 46612615052374876}
@@ -129,15 +131,18 @@ MonoBehaviour:
   baseDamage: 30
   swordDamage: 0
   totalDamage: 0
+  currentHealth: 0
   attackRate: 2
   healthImage: {fileID: 0}
   speed: 4
-  playerRigidBody: {fileID: 0}
+  playerRigidBody: {fileID: 8724185144195663255}
   attackPoint: {fileID: 46612615052374876}
   attackrange: 0.5
   enemyLayers:
     serializedVersion: 2
     m_Bits: 136
+  PlayerPosition: {x: 0, y: 0, z: 0}
+  gameDataController: {fileID: 616107410}
 --- !u!50 &8724185144195663255
 Rigidbody2D:
   serializedVersion: 4
@@ -175,6 +180,45 @@ CapsuleCollider2D:
   m_Offset: {x: 0.095483795, y: 0.071459785}
   m_Size: {x: 0.19174315, y: 0.29072535}
   m_Direction: 0
+--- !u!114 &5075799972465034569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346163505537260892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b94b3ac2b6aa654098e50004ec7f752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentlevel: 0
+  currentExp: 0
+  expToLevelUp: 000000000a000000140000003200000064000000c8000000f4010000e8030000d007000088130000
+  healthLevels: 6400000082000000a0000000c8000000e6000000040100002c0100005e01000090010000f4010000
+  damageLevels: 1400000023000000320000004b0000005a000000690000008200000091000000a0000000c8000000
+  armorLevels: 0f0000001e0000002d0000004600000055000000640000007800000096000000af000000c8000000
+  vida: {fileID: 0}
+  "da\xF1o": {fileID: 0}
+  armadura: {fileID: 0}
+  level: {fileID: 0}
+  exp: {fileID: 0}
+--- !u!114 &616107410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346163505537260892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa499c424b4343843b94088e50804435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1346163505537260892}
+  GameDataFiles: 
+  gameData:
+    playerPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2924696295523853372
 GameObject:
   m_ObjectHideFlags: 0

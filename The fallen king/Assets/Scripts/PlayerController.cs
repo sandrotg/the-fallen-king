@@ -32,11 +32,11 @@ class PlayerController : Character
     {
         animator.SetBool("isDead", false);
         animator.SetFloat(MOVING, 0);
-        totalArmor = baseArmor + extraArmor;
+        /*totalArmor = baseArmor + extraArmor;
         totalHealth = baseHealth + totalArmor;
         currentHealth = totalHealth;
-        totalDamage = baseDamage + swordDamage;
-        startPosition = this.transform.position;
+        totalDamage = baseDamage + swordDamage; 
+        startPosition = this.transform.position; */
         if (instance == null)
         {
             instance = this;

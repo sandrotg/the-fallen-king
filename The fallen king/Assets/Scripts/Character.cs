@@ -4,16 +4,16 @@ using UnityEngine;
 
 abstract class Character : MonoBehaviour
 {
-    [SerializeField] protected float baseHealth;
+    [SerializeField]protected float baseHealth;
 
-    [SerializeField] protected float baseArmor;
+    [SerializeField]protected float baseArmor;
 
     public float extraArmor = 0f;
 
     [SerializeField] protected float totalArmor;
 
     [SerializeField] protected float totalHealth;
-    [SerializeField] protected float baseDamage;
+    [SerializeField]protected float baseDamage;
 
     public float swordDamage = 0f;
     [SerializeField] protected float totalDamage;
@@ -49,5 +49,25 @@ abstract class Character : MonoBehaviour
         totalArmor = baseArmor + extraArmor;
         totalHealth = baseHealth + totalArmor;
     }
+    public void SetBaseArmor(int value){
+        baseArmor = value;
+    }
 
+    public void SetBaseDamage(int value){
+        baseDamage = value;
+    }
+
+    public void SetBaseHealth(int value){
+        baseHealth = value;
+    }
+
+
+    public float getTotalDamage(){
+        return baseDamage;
+    }    
+
+    public float getTotalArmor(){
+        return baseArmor;
+    }
+    
 }

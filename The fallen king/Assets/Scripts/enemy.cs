@@ -21,6 +21,7 @@ class enemy : Character
     [SerializeField] protected Transform attackPoint;
     [SerializeField] protected int numAttacks;
     protected float distanceFromPlayer;
+    [SerializeField] protected int experienceToAdd;
     protected const string Move = "isMoving";
     void Start()
     {
@@ -176,6 +177,7 @@ class enemy : Character
     {
         enemyAnimator.SetBool("isDead", true);
         GetComponent<Collider2D>().enabled = false;
+        PlayerController.instance.GetComponent<LevelController>().AddExperience(experienceToAdd);
         enemyRigidBody.velocity = Vector2.zero;
         this.enabled = false;
     }

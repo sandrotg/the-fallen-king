@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 2096401141}
   m_Layer: 7
   m_Name: butcher
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,8 +174,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0006111998, y: -0.00008115643}
-  m_Size: {x: 0.16124797, y: 0.39510736}
+  m_Offset: {x: 0.0040933806, y: -0.01257899}
+  m_Size: {x: 0.1834315, y: 0.42249313}
   m_Direction: 0
 --- !u!114 &2096401141
 MonoBehaviour:
