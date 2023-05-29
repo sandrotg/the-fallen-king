@@ -177,7 +177,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &210296487
 GameObject:
@@ -280,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1221528105488248088, guid: 115087940aae9df4d9a18daaae78fbe3, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1221528105488248088, guid: 115087940aae9df4d9a18daaae78fbe3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -419,6 +419,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7880634765174486522, guid: ffec610d359beef4f83f4868181ef4af, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880634765174486526, guid: ffec610d359beef4f83f4868181ef4af, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffec610d359beef4f83f4868181ef4af, type: 3}
 --- !u!1001 &501197685
@@ -446,7 +454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6476298654305731292, guid: 10dc8a05e8aed14468b72c4ea66dcf97, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6476298654305731292, guid: 10dc8a05e8aed14468b72c4ea66dcf97, type: 3}
       propertyPath: m_AnchorMax.x
@@ -531,7 +539,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8542937474267550240, guid: 34ead8f07fc2c794e8e493878014d98b, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8542937474267550240, guid: 34ead8f07fc2c794e8e493878014d98b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -604,7 +612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1346163505537260895, guid: 4a8b7874573be5449b75b259ed09f302, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1346163505537260895, guid: 4a8b7874573be5449b75b259ed09f302, type: 3}
       propertyPath: m_LocalPosition.x
@@ -691,7 +699,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1214705446
 PrefabInstance:
@@ -710,7 +718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7341627402742747628, guid: 5404e2d304ce9d84e8e0b958cc65ea6e, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7341627402742747628, guid: 5404e2d304ce9d84e8e0b958cc65ea6e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -820,7 +828,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5831460264288862830
 PrefabInstance:
@@ -839,7 +847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5831460263102517778, guid: cd64335f15649184d8c8e5c7a6dd9a31, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5831460263102517778, guid: cd64335f15649184d8c8e5c7a6dd9a31, type: 3}
       propertyPath: m_AnchorMax.x
@@ -923,7 +931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5831460263102517782, guid: cd64335f15649184d8c8e5c7a6dd9a31, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5831460263868271505, guid: cd64335f15649184d8c8e5c7a6dd9a31, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

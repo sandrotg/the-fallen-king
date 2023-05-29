@@ -19,22 +19,12 @@ class PlayerController : Character
     private LayerMask enemyLayers;
     public Vector3 PlayerPosition;
     public GameDataController gameDataController;
-    public PlayerController instance;
+    public static PlayerController instance;
 
     // Start is called before the first frame update
 
     void Awake()
     {
-        animator = GetComponent<Animator>();
-        playerRigidBody = GetComponent<Rigidbody2D>();
-    }
-    void Start()
-    {
-        animator.SetBool("isDead", false);
-        animator.SetFloat(MOVING, 0);
-        totalHealth = baseHealth;
-        currentHealth = totalHealth;
-        startPosition = this.transform.position;
         if (instance == null)
         {
             instance = this;
@@ -43,6 +33,26 @@ class PlayerController : Character
         {
             Destroy(gameObject);
         }
+        animator = GetComponent<Animator>();
+        playerRigidBody = GetComponent<Rigidbody2D>();
+    }
+    void Start()
+    {
+        animator.SetBool("isDead", false);
+        animator.SetFloat(MOVING, 0);
+        totalArmor = baseArmor + extraArmor;
+        totalHealth = baseHealth + totalArmor;
+        currentHealth = totalHealth;
+        totalDamage = baseDamage + swordDamage;
+        startPosition = this.transform.position;
+        /*if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }*/
     }
 
     void startGame(){

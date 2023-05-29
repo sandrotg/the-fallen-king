@@ -16,11 +16,11 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        if (itemList != null)
+        /*if (itemList != null)
         {
 
             DataToInventory();
-        }
+        }*/
     }
 
     public void CheckSlotAvailability(GameObject itemToAdd, string itemName, int itemAmount)
@@ -131,7 +131,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void InventoryToData()
+    /*public void InventoryToData()
     {
         for (int i = 0; i < slots.Count; i++)
         {
@@ -160,5 +160,5 @@ public class Inventory : MonoBehaviour
             }
 
         }
-    }
+    }*/
 }
