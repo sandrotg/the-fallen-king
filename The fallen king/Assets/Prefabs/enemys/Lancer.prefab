@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 1221528105488248085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.8571, y: 0.6354, z: 0}
-  m_LocalScale: {x: 3.218935, y: 3.2691913, z: 1}
+  m_LocalScale: {x: 2.1360853, y: 2.433259, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1421124783}
@@ -174,8 +174,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.015689874, y: -0.0053208577}
-  m_Size: {x: 0.17926684, y: 0.39371186}
+  m_Offset: {x: 0.010208581, y: -0.008976128}
+  m_Size: {x: 0.1796197, y: 0.40284652}
   m_Direction: 0
 --- !u!114 &214904042
 MonoBehaviour:
@@ -192,8 +192,12 @@ MonoBehaviour:
   baseHealth: 80
   baseArmor: 20
   extraArmor: 0
+  totalArmor: 0
+  totalHealth: 0
   baseDamage: 14
   swordDamage: 0
+  totalDamage: 0
+  currentHealth: 0
   attackRate: 0.8
   enemySpeed: 1
   timeBetweenSteps: 2
@@ -207,3 +211,4 @@ MonoBehaviour:
   attackRange: 0.8
   attackPoint: {fileID: 1421124783}
   numAttacks: 2
+  experienceToAdd: 12
