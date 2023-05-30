@@ -2227,7 +2227,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fantasy_Outside_D_4: 1136997724
+      Fantasy_Outside_D_57: 1118975706
       Fantasy_Outside_D_26: -1321705580
       Fantasy_Outside_D_83: -90817238
       Fantasy_Outside_D_29: -936414122
@@ -2260,17 +2260,17 @@ TextureImporter:
       Fantasy_Outside_D_35: -2068060012
       Fantasy_Outside_D_93: 1240857655
       Fantasy_Outside_D_56: -694283095
-      Fantasy_Outside_D_69: 492548581
       Fantasy_Outside_D_18: -1062480524
+      Fantasy_Outside_D_49: -1494522642
+      Fantasy_Outside_D_69: 492548581
       Fantasy_Outside_D_64: -2071975244
       Fantasy_Outside_D_23: 1934882247
       Fantasy_Outside_D_5: 92435354
-      Fantasy_Outside_D_49: -1494522642
+      Fantasy_Outside_D_90: -1654789645
       Fantasy_Outside_D_3: 1841558019
       Fantasy_Outside_D_54: -1617465392
       Fantasy_Outside_D_89: -153959514
       Fantasy_Outside_D_2: -26414959
-      Fantasy_Outside_D_90: -1654789645
       Fantasy_Outside_D_55: -1559867771
       Fantasy_Outside_D_13: -1429827704
       Fantasy_Outside_D_6: 1838930364
@@ -2297,8 +2297,8 @@ TextureImporter:
       Fantasy_Outside_D_81: -1275310683
       Fantasy_Outside_D_95: -642464336
       Fantasy_Outside_D_39: -1180398092
-      Fantasy_Outside_D_1: 548524724
       Fantasy_Outside_D_15: 770984129
+      Fantasy_Outside_D_1: 548524724
       Fantasy_Outside_D_12: 1534623011
       Fantasy_Outside_D_70: 147952641
       Fantasy_Outside_D_42: -927977479
@@ -2323,9 +2323,9 @@ TextureImporter:
       Fantasy_Outside_D_30: 1458067182
       Fantasy_Outside_D_48: 1010072556
       Fantasy_Outside_D_46: -612320642
-      Fantasy_Outside_D_21: 1122236253
       Fantasy_Outside_D_72: -1424500897
-      Fantasy_Outside_D_57: 1118975706
+      Fantasy_Outside_D_21: 1122236253
+      Fantasy_Outside_D_4: 1136997724
       Fantasy_Outside_D_67: -214225503
   spritePackingTag: 
   pSDRemoveMatte: 0

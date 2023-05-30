@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healtToGive: 12
+  Increase: 0
   itemType: 1
 --- !u!114 &438356064375734985
 MonoBehaviour:
@@ -163,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 4
+  itemType: 0
 --- !u!1 &6794680893880418924
 GameObject:
   m_ObjectHideFlags: 0

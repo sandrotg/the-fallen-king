@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healtToGive: 5
+  Increase: 0
   itemType: 1
 --- !u!114 &-627020462978912026
 MonoBehaviour:
@@ -243,3 +244,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 9
+  itemType: 0
