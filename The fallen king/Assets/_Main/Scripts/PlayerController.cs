@@ -20,6 +20,7 @@ class PlayerController : Character
     public Vector3 PlayerPosition;
     public GameDataController gameDataController;
     public static PlayerController instance;
+    public Canvas gameover;
 
     // Start is called before the first frame update
 
@@ -32,6 +33,7 @@ class PlayerController : Character
     {
         animator.SetBool("isDead", false);
         animator.SetFloat(MOVING, 0);
+        gameover.enabled = false;|
         /*totalArmor = baseArmor + extraArmor;
         totalHealth = baseHealth + totalArmor;
         currentHealth = totalHealth;
@@ -182,6 +184,7 @@ class PlayerController : Character
         if (currentHealth <= 0)
         {
             Die();
+            gameover.enabled = true;
         }
     }
 
@@ -199,14 +202,14 @@ class PlayerController : Character
     protected void Die()
     {
         //animator.SetBool("isDead", true);
-        gameDataController.LoadData();
-        currentHealth = totalHealth;
-        PlayerPosition = gameDataController.gameData.playerPosition;
+        //gameDataController.LoadData();
+        //currentHealth = totalHealth;
+        //PlayerPosition = gameDataController.gameData.playerPosition;
         //GetComponent<Collider2D>().enabled = false;
         //playerRigidBody.velocity = Vector2.zero;
         //this.enabled = false;
     }
-    
+
     void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
