@@ -5,7 +5,7 @@ using UnityEngine;
 public class Chest : MonoBehaviour
 {
     public Animator myAnim;
-    public GameObject chestItem;
+    public GameObject[] chestItem;
     public float chestDelay;
     private Collider2D myCollider;
 
@@ -32,6 +32,9 @@ public class Chest : MonoBehaviour
     IEnumerator GetChestItem()
     {
         yield return new WaitForSeconds(chestDelay);
-        Instantiate(chestItem, transform.position, Quaternion.identity);
+        for (int i = 0; i < chestItem.Length; i++)
+        {
+            Instantiate(chestItem[i], transform.position, Quaternion.identity);
+        }
     }
 }

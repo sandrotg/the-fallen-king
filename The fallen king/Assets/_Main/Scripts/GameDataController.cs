@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class GameDatas
@@ -23,6 +24,7 @@ public class GameDataController : MonoBehaviour
     private float[] enemyhealthsaved;
     private Vector3[] enemyPosition;
     private int enemycant;
+    public MenuManager menuManager;
 
     private void Awake()
     {
@@ -35,14 +37,14 @@ public class GameDataController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        /*if (Input.GetKeyDown(KeyCode.Z))
         {
             SaveData();
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
             LoadData();
-        }
+        }*/
     }
 
     public void SaveData()
@@ -66,6 +68,7 @@ public class GameDataController : MonoBehaviour
         gameData.enemyPosition = enemyPosition;
         string jsonString = JsonUtility.ToJson(gameData);
         File.WriteAllText(GameDataFiles, jsonString);
+        menuManager.HidePausaMenu();
         Debug.Log("Game Saved");
     }
 
@@ -81,7 +84,6 @@ public class GameDataController : MonoBehaviour
             gameData.enemyPosition = loadedData.enemyPosition;
             gameData.level = loadedData.level;
             gameData.currentexperience = loadedData.currentexperience;
-
             for (int i = 0; i < enemycant; i++)
             {
                 enemy[i].GetComponent<enemy>().currentHealth = gameData.enemyhealthsaved[i];
@@ -94,6 +96,8 @@ public class GameDataController : MonoBehaviour
             player.GetComponent<LevelController>().currentlevel = gameData.level;
             player.GetComponent<LevelController>().currentExp = gameData.currentexperience;
             Debug.Log("Player's position: " + gameData.playerPosition);
+            menuManager.HidePausaMenu();
         }
     }
 }
+

@@ -189,8 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f80ed0b938c214cb38a2a558d085a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 80
-  baseArmor: 20
+  baseHealth: 100
+  baseArmor: 50
   extraArmor: 0
   totalArmor: 0
   totalHealth: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   timeBetweenSteps: 2
   timeToMakeStep: 1.5
   directionToMakeStep: {x: 0, y: 0}
-  enemyAnimator: {fileID: 0}
+  enemyAnimator: {fileID: 1221528105488248090}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -212,4 +212,5 @@ MonoBehaviour:
   attackRange: 0.8
   attackPoint: {fileID: 1421124783}
   numAttacks: 2
-  experienceToAdd: 12
+  experienceToAdd: 3
+  EnemyItem: {fileID: 0}

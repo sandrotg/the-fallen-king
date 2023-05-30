@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7941022071840176527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5252, y: -0.671, z: 0}
-  m_LocalScale: {x: 9.445397, y: 8.484037, z: 1}
+  m_LocalPosition: {x: -6.7985, y: 3.1665, z: 0}
+  m_LocalScale: {x: 2.1705523, y: 2.0208976, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1370518157
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1450643630, guid: c76bcf362cb6fb44ba9b75f5b7446b18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -120,18 +120,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0011006594, y: 0.11021483}
+  m_Offset: {x: -0.019914329, y: 0.2787691}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.2, y: 0.19}
+    oldSize: {x: 0.625, y: 0.59375}
     newSize: {x: 0.2, y: 0.19}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.52865064, y: 0.5231736}
+  m_Size: {x: 0.93493056, y: 1.0208101}
   m_EdgeRadius: 0
 --- !u!114 &7126464063029387151
 MonoBehaviour:
@@ -146,5 +146,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myAnim: {fileID: 7126464063029387149}
-  chestItem: {fileID: 0}
+  chestItem:
+  - {fileID: 0}
   chestDelay: 0.1

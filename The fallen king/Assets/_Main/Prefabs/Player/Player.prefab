@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346163505537260892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.9, y: -0.96, z: 0}
+  m_LocalPosition: {x: -0.85, y: -2.3200002, z: 0}
   m_LocalScale: {x: 2.9301748, y: 3.5774524, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -131,7 +131,7 @@ MonoBehaviour:
   baseDamage: 30
   swordDamage: 0
   totalDamage: 0
-  currentHealth: 0
+  currentHealth: 160
   attackRate: 2
   healthImage: {fileID: 0}
   speed: 4
@@ -177,8 +177,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.095483795, y: 0.071459785}
-  m_Size: {x: 0.19174315, y: 0.29072535}
+  m_Offset: {x: 0.09548379, y: 0.005610492}
+  m_Size: {x: 0.19174317, y: 0.42242402}
   m_Direction: 0
 --- !u!114 &5075799972465034569
 MonoBehaviour:
@@ -216,9 +216,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1346163505537260892}
+  enemy: []
   GameDataFiles: 
   gameData:
     playerPosition: {x: 0, y: 0, z: 0}
+    healthsaved: 0
+    enemyhealthsaved: []
+    enemyPosition: []
+    level: 0
+    currentexperience: 0
+  menuManager: {fileID: 0}
 --- !u!1 &2924696295523853372
 GameObject:
   m_ObjectHideFlags: 0

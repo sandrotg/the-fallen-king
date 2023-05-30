@@ -5,15 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/_Main/Scenes/MainScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/_Main/Scenes/esce.unity
-    guid: e0bd256bda2bab24fa4560ef1545b35a
+    path: Assets/_Main/Scenes/Menu Inicial.unity
+    guid: 7f46e473f0f01384f8aa9c2c26b6a48f
   - enabled: 1
-    path: Assets/_Main/Scenes/Game Over.unity
-    guid: 2af0b483a001d8c4795942f53289131d
+    path: Assets/_Main/Scenes/Mapa.unity
+    guid: 27a8bd4cb46ea9c4f9a817d0501e6ef3
+  - enabled: 1
+    path: Assets/_Main/Scenes/mapabeta.unity
+    guid: 4c859e17511c88443bc26cbe0b4bfdf5
   - enabled: 1
     path: Assets/_Main/Scenes/Catacombs.unity
     guid: 7fb9eedf155177b45a879ad0a71b8783

@@ -23,6 +23,7 @@ class enemy : Character
     protected float distanceFromPlayer;
     protected const string Move = "isMoving";
     [SerializeField] protected int experienceToAdd;
+    public GameObject EnemyItem;
     void Start()
     {
         init();
@@ -207,6 +208,7 @@ class enemy : Character
         if (currentHealth == 0)
         {
             Die();
+            //Instantiate(EnemyItem, transform.position, Quaternion.identity);
         }
     }
 

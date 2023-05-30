@@ -174,8 +174,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010208581, y: -0.008976128}
-  m_Size: {x: 0.1796197, y: 0.40284652}
+  m_Offset: {x: -0.20004115, y: -0.0057379347}
+  m_Size: {x: 0.21650574, y: 0.41025507}
   m_Direction: 0
 --- !u!114 &158182897370272009
 MonoBehaviour:
@@ -203,13 +203,14 @@ MonoBehaviour:
   timeBetweenSteps: 2
   timeToMakeStep: 1.5
   directionToMakeStep: {x: 0, y: 0}
-  enemyAnimator: {fileID: 0}
+  enemyAnimator: {fileID: 2648722351520140595}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  lineOFSite: 5
-  lineOfAttack: 1.5
-  attackRange: 0.8
+  lineOFSite: 3
+  lineOfAttack: 1
+  attackRange: 1
   attackPoint: {fileID: 8971458024370243402}
   numAttacks: 2
   experienceToAdd: 12
+  EnemyItem: {fileID: 0}

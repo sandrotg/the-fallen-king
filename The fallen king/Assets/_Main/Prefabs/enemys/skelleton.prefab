@@ -203,12 +203,12 @@ MonoBehaviour:
   timeBetweenSteps: 2
   timeToMakeStep: 1.5
   directionToMakeStep: {x: 0, y: 0}
-  enemyAnimator: {fileID: 0}
+  enemyAnimator: {fileID: 5492833011280489424}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  lineOFSite: 5
-  lineOfAttack: 1.2
+  lineOFSite: 3
+  lineOfAttack: 1
   attackRange: 0.5
   attackPoint: {fileID: 294996582}
   numAttacks: 2
