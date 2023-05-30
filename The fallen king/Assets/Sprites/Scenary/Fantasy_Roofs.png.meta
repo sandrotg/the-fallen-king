@@ -841,42 +841,42 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fantasy_Roofs_0: 875293494
-      Fantasy_Roofs_1: 654846727
-      Fantasy_Roofs_10: -35652800
-      Fantasy_Roofs_11: 1695725169
-      Fantasy_Roofs_12: 138800476
-      Fantasy_Roofs_13: 1418629851
-      Fantasy_Roofs_14: -1021549240
-      Fantasy_Roofs_15: 1207648492
-      Fantasy_Roofs_16: -935249184
-      Fantasy_Roofs_17: -1332335414
       Fantasy_Roofs_18: 1341941408
-      Fantasy_Roofs_19: -1644876795
-      Fantasy_Roofs_2: -554131425
-      Fantasy_Roofs_20: 273460521
-      Fantasy_Roofs_21: -1414999426
-      Fantasy_Roofs_22: 451430678
-      Fantasy_Roofs_23: 1805625575
-      Fantasy_Roofs_24: 437700303
-      Fantasy_Roofs_25: 477677630
-      Fantasy_Roofs_26: -1452463656
-      Fantasy_Roofs_27: 2079526835
-      Fantasy_Roofs_28: 474519077
-      Fantasy_Roofs_29: 1303498721
-      Fantasy_Roofs_3: -2123988918
-      Fantasy_Roofs_30: 252249434
       Fantasy_Roofs_31: -1914262214
-      Fantasy_Roofs_32: -855047848
-      Fantasy_Roofs_33: -1669809359
-      Fantasy_Roofs_34: -633685423
-      Fantasy_Roofs_35: -1031225193
       Fantasy_Roofs_4: -519845253
-      Fantasy_Roofs_5: 380857829
+      Fantasy_Roofs_33: -1669809359
+      Fantasy_Roofs_26: -1452463656
+      Fantasy_Roofs_34: -633685423
       Fantasy_Roofs_6: 1648978933
-      Fantasy_Roofs_7: 2053747297
+      Fantasy_Roofs_10: -35652800
+      Fantasy_Roofs_19: -1644876795
+      Fantasy_Roofs_22: 451430678
+      Fantasy_Roofs_14: -1021549240
+      Fantasy_Roofs_11: 1695725169
+      Fantasy_Roofs_30: 252249434
       Fantasy_Roofs_8: 1460499374
+      Fantasy_Roofs_28: 474519077
+      Fantasy_Roofs_12: 138800476
+      Fantasy_Roofs_1: 654846727
+      Fantasy_Roofs_20: 273460521
+      Fantasy_Roofs_3: -2123988918
+      Fantasy_Roofs_17: -1332335414
+      Fantasy_Roofs_16: -935249184
+      Fantasy_Roofs_2: -554131425
+      Fantasy_Roofs_32: -855047848
+      Fantasy_Roofs_24: 437700303
+      Fantasy_Roofs_13: 1418629851
+      Fantasy_Roofs_21: -1414999426
+      Fantasy_Roofs_15: 1207648492
+      Fantasy_Roofs_5: 380857829
+      Fantasy_Roofs_25: 477677630
+      Fantasy_Roofs_35: -1031225193
+      Fantasy_Roofs_23: 1805625575
+      Fantasy_Roofs_27: 2079526835
+      Fantasy_Roofs_7: 2053747297
+      Fantasy_Roofs_0: 875293494
       Fantasy_Roofs_9: -1488246418
+      Fantasy_Roofs_29: 1303498721
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
