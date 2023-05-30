@@ -10,6 +10,7 @@ TagManager:
   - Lancer
   - Butcher
   - Bloody Knight
+  - Boss
   layers:
   - Default
   - TransparentFX

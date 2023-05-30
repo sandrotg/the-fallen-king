@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 class enemy : Character
 {
@@ -216,11 +217,18 @@ class enemy : Character
     {
         if(currentHealth == 0)
         {
+            if(gameObject.tag == "Boss")
+            {
+                SceneManager.LoadScene(4);
+            }
+            else
+            {
             enemyAnimator.SetBool("isDead", true);
             GetComponent<Collider2D>().enabled = false;
             PlayerController.instance.GetComponent<LevelController>().AddExperience(experienceToAdd);
             enemyRigidBody.velocity = Vector2.zero;
             this.enabled = false;
+            }
         }
         else
         {
