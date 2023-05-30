@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - Item
+  - Skelleton
+  - Lancer
+  - Butcher
+  - Bloody Knight
   layers:
   - Default
   - TransparentFX
