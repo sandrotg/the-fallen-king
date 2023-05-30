@@ -140,7 +140,14 @@ class PlayerController : Character
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<enemy>().TakeDamage(totalDamage);
+            if (gameObject.tag == "Boss")
+            {
+                enemy.GetComponent<Boss>().TakeDamage(totalDamage);
+            }
+            else
+            {
+                enemy.GetComponent<enemy>().TakeDamage(totalDamage);
+            }
         }
     }
     void Attack2()
@@ -149,17 +156,31 @@ class PlayerController : Character
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange * 1.1f, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<enemy>().TakeDamage(totalDamage * 1.25f);
+            if (gameObject.tag == "Boss")
+            {
+                enemy.GetComponent<Boss>().TakeDamage(totalDamage * 1.25f);
+            }
+            else
+            {
+                enemy.GetComponent<enemy>().TakeDamage(totalDamage * 1.25f);
+            }
         }
     }
 
-    void Attack3()00
+    void Attack3()
     {
         animator.SetTrigger("Attack3");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange * 1.3f, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<enemy>().TakeDamage(totalDamage * 1.5f);
+            if (gameObject.tag == "Boss")
+            {
+                enemy.GetComponent<Boss>().TakeDamage(totalDamage * 1.5f);
+            }
+            else
+            {
+                enemy.GetComponent<enemy>().TakeDamage(totalDamage * 1.5f);
+            }
         }
     }
     bool Block()
