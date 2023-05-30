@@ -1,0 +1,2159 @@
+fileFormatVersion: 2
+guid: c4b196544b2a649419cc1d865e6b89e6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2238
+        width: 184
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f958274fbe7784c93b7a76bd72b3ed
+      internalID: 976599912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2237
+        width: 172
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93359a03a4f19234882a27b2efb59986
+      internalID: 1138641937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2237
+        width: 172
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e431074466b3884297a93d8985ef090
+      internalID: 964454084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 2241
+        width: 131
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8cc25fa8b1028142ba9c8b81219c433
+      internalID: -1422253816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 2243
+        width: 125
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5339bc3d8e503884d802d61a31eaa826
+      internalID: 765331067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 2174
+        width: 98
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565695d0e8f21f74fb2e3f45ca26ba6d
+      internalID: -196576256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 2175
+        width: 103
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a995f4e6938a2d6499f5ac1d56f9a8f3
+      internalID: -1309417957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 2183
+        width: 84
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929438f6175a8a8408d237c8017cbccd
+      internalID: -1203433196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 2152
+        width: 78
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8135b662ed6b9645b0fd8823b780119
+      internalID: 1754932737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2019
+        width: 162
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e166f457712932440bf1508a8f60d0c3
+      internalID: 1539954929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 2022
+        width: 135
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8463ea63917f0de418c326e30168f27c
+      internalID: 198064348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 2023
+        width: 95
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb0fe76fbfcc04498e9d44e7ca75f25
+      internalID: -174795104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 2022
+        width: 107
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f359a0fe4ff46d4085bd00a87d5557a
+      internalID: -309345602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1902
+        width: 126
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87269d25214adb4e8eecb6d7748d4dc
+      internalID: 2001894685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1803
+        width: 139
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4d14f6eced4604085ad646d58d3c6f
+      internalID: -1860381246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1800
+        width: 124
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1012c4e74c57aa346a69c05c8d328892
+      internalID: -544468433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 1797
+        width: 79
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e79c44f3cffab84089d45d3b64535fc
+      internalID: 1352118509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1797
+        width: 69
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450890b1225dd494881ef9fca3366351
+      internalID: 265988692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1601
+        width: 110
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f70f139607aca04685035e7ca26aab1
+      internalID: 1983954548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1604
+        width: 132
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed7707cf35be1ef4096be11a702d09ab
+      internalID: 533919114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1604
+        width: 125
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d51430f19d8c841abec1a92e4ddf7e
+      internalID: -592216850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 1604
+        width: 130
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93335507af7358c4e8426807186b677e
+      internalID: 1360550008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1461
+        width: 111
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c580ceeffe2261459367a5db9f1be25
+      internalID: 1572864624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1464
+        width: 97
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54cf548aa2676ef4fb683b9b082a6e84
+      internalID: 144322384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1466
+        width: 112
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08fff35411513214cb28f256476cd76d
+      internalID: -1668916711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 1464
+        width: 115
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00405426e64f88c48ac039c6862e0589
+      internalID: 1330932814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 1466
+        width: 99
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f7ae562f9f89641bc29d988e080413
+      internalID: -606927069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1470
+        width: 125
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aef061b078b46f4d9d293fb030a991e
+      internalID: 181534170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 1470
+        width: 118
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205f3fc44a428cf42b5062dd081024c0
+      internalID: -1804683388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 1466
+        width: 138
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ccda4e7b2be7e24eab8516b3ab97573
+      internalID: -323875227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1351
+        width: 89
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0308a01788d3454499ae4b4bc1249ca5
+      internalID: -1060688751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 1356
+        width: 82
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e9a979a9291f943aa64061609a0af3
+      internalID: -670197368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1356
+        width: 146
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473e7f25166e8c7439ce0f223955931f
+      internalID: -1485916615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1351
+        width: 167
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a4ae7d2f3c00e4b822d30ae0667a5f
+      internalID: -1037527630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 1351
+        width: 163
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a101debf67671ec45bb631b5a0af770c
+      internalID: -1740956057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1241
+        width: 107
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb95f49e15af0845b13f152265fd33e
+      internalID: 2045879718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 1241
+        width: 113
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5905b9ccc037a694f8a7276d9445ad9e
+      internalID: -1615536969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 1233
+        width: 113
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dada7e39608967c449f3073d81f11eb3
+      internalID: -327954253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1241
+        width: 98
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba34f84ac2c4e34a91786d5325bcfb0
+      internalID: -1040498498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 1241
+        width: 104
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677de28921e164b4db8bab1fbc101e7f
+      internalID: -1153032954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 1241
+        width: 108
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e81171aa187da468bc5127aab9db57
+      internalID: -821322784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 1241
+        width: 108
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047d06fa267e765479e150f01f86d0a1
+      internalID: 764205112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 1244
+        width: 101
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0665456e41a8d77429b6966844942f41
+      internalID: -80483526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1130
+        width: 176
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05143a2ef3e7f854cb85dbadfaafaf50
+      internalID: 907188476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1131
+        width: 176
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1957c1ee802d6745ab1987c07f1f178
+      internalID: 996043269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1130
+        width: 172
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2954e28e55cd54542ba5697f1e64e8b8
+      internalID: 1433842028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 1131
+        width: 171
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f4ef77fc0dd6a49bce13a7a1c332a2
+      internalID: 1253967992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1135
+        width: 166
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0afebab22b11d4a81e35af953abc0b
+      internalID: -995026339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 1135
+        width: 171
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef3b8e0abf1419429f3181f4212df40
+      internalID: 1687798470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 1133
+        width: 170
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f7745537ec3c640b4ff73ebafec7c1
+      internalID: 49215133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 1130
+        width: 174
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a822da14aaac1cf49afff5e0e6707d76
+      internalID: -472641725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1021
+        width: 168
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fc234a4ab93ce409a807a3a92621a5
+      internalID: 1942800579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1017
+        width: 174
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d332c0f229f57441a021dcf2c2b9f04
+      internalID: -271395967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1019
+        width: 157
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b799d2eb45d6ef4881da713b3732923
+      internalID: 370647685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 1019
+        width: 165
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25393b0dd16a28d48ab42ab8420d51e4
+      internalID: -1719278045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 1021
+        width: 185
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d35129ebdf1ccf47afa928eeba85c0f
+      internalID: 214850782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 1024
+        width: 169
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279bf0f5d00c8084c9c4ad914d860db8
+      internalID: 584734479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 1019
+        width: 163
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f9255a1f548534ca552a46386e6c99
+      internalID: -1918310873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 1023
+        width: 172
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae55eb1f5d291d845890073d7a21ebb8
+      internalID: -1501768495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 806
+        width: 142
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca926cd6c3e1a534d880604c20b6e50f
+      internalID: -389294037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 805
+        width: 163
+        height: 84
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5000022}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e414b79ea8998479aeb40d906da929
+      internalID: 1270575883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 803
+        width: 154
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615f3a74dd4941d4587bc450baa1ec24
+      internalID: -1362059567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 793
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5664668fed2edbc4b8d1a38d9305595d
+      internalID: -1201068255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 798
+        width: 155
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0422e07730f654a8712ab6aac9a66a
+      internalID: -1392163362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 794
+        width: 230
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1dd66a7ba7c3784784269d690e493b0
+      internalID: 1278216922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 796
+        width: 120
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97508bf6379b81440b5de6837f131360
+      internalID: -1530241439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 676
+        width: 120
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc15daf88c611940bd9c6e753771686
+      internalID: -1108246216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 681
+        width: 125
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48cf405db0a58df4a918122a4d063f2d
+      internalID: -207401535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 679
+        width: 104
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c0dcafac365ed4290cc1d65943e34d
+      internalID: 97388835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 678
+        width: 113
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4013f3b9dd661384da9d58ca1aec08af
+      internalID: 1822783801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 676
+        width: 98
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c4a56fff788824da6026a49c14096b
+      internalID: 1238891926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 678
+        width: 73
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc88168146175c41aaaa0b01922d349
+      internalID: 1564306448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 458
+        width: 121
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf908a1290381e4ea92a22ad1f4463a
+      internalID: -5488826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 458
+        width: 132
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02ed4e8d31372e45a068e3789896715
+      internalID: -31022406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 463
+        width: 143
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67bae1773b4f804fb58e638d1aac602
+      internalID: -109950985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 458
+        width: 152
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c32e7a23b6321a4191b61bb37ee526f
+      internalID: 535869344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 463
+        width: 151
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d29aa3061b1b94a8fd63d554be5738
+      internalID: 1645534453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 469
+        width: 146
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980e733fa8c7a8f4db72481e38a08101
+      internalID: -1008842251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 342
+        width: 172
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41366abf8b8d242408f03c26861c42c4
+      internalID: -164027916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 342
+        width: 139
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15284985f4901494a905b069c7c7e6b0
+      internalID: 201053452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 346
+        width: 114
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b8a71e8ecbddf41a7359d76a97320a
+      internalID: -1243119442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 344
+        width: 111
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00c32a7b84ee2240bef8c9ffc21897d
+      internalID: 1292681211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_82
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 340
+        width: 100
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ab67bc4e8c9a4428a2354abc2522ac
+      internalID: -28646737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 343
+        width: 93
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3131243522f5a32429f51f0d5acfc0c6
+      internalID: 250178626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_84
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 241
+        width: 152
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831da4daefb0e9a4595b469783fc0c94
+      internalID: 272905863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_85
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 232
+        width: 185
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b891c2cfaa5184eb2f3f710f5468ca
+      internalID: -1949492703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_86
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 234
+        width: 178
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aed960c2f505d642af46dab854bad4d
+      internalID: 48390067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_87
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 236
+        width: 200
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf71c71a2ae3664b8cb18a783c6a84f
+      internalID: 1951023683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_88
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 110
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa00196ec7ae8c429068aa15cc0d870
+      internalID: 195550794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_89
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 42
+        width: 137
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edaa7360ada02864fbd8d95347a7e43c
+      internalID: -654293309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_90
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 40
+        width: 150
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd711b0fc895d849a6f732cd8ff2fc0
+      internalID: -1536113770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_002_elemental_effects-SpriteSheet_91
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 48
+        width: 169
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebb693bc1375144eb9a0b5c08537ca9
+      internalID: 874052903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      MC_002_elemental_effects-SpriteSheet_64: 1278216922
+      MC_002_elemental_effects-SpriteSheet_50: 1433842028
+      MC_002_elemental_effects-SpriteSheet_62: -1918310873
+      MC_002_elemental_effects-SpriteSheet_82: -28646737
+      MC_002_elemental_effects-SpriteSheet_86: 48390067
+      MC_002_elemental_effects-SpriteSheet_1: 1138641937
+      MC_002_elemental_effects-SpriteSheet_44: -1153032954
+      MC_002_elemental_effects-SpriteSheet_41: -1615536969
+      MC_002_elemental_effects-SpriteSheet_88: 195550794
+      MC_002_elemental_effects-SpriteSheet_20: -1362059567
+      MC_002_elemental_effects-SpriteSheet_90: -1536113770
+      MC_002_elemental_effects-SpriteSheet_30: 1330932814
+      MC_002_elemental_effects-SpriteSheet_33: -1804683388
+      MC_002_elemental_effects-SpriteSheet_29: -1668916711
+      MC_002_elemental_effects-SpriteSheet_18: -389294037
+      MC_002_elemental_effects-SpriteSheet_81: 1292681211
+      MC_002_elemental_effects-SpriteSheet_78: -164027916
+      MC_002_elemental_effects-SpriteSheet_10: 198064348
+      MC_002_elemental_effects-SpriteSheet_89: -654293309
+      MC_002_elemental_effects-SpriteSheet_6: -1309417957
+      MC_002_elemental_effects-SpriteSheet_37: -1485916615
+      MC_002_elemental_effects-SpriteSheet_35: -1060688751
+      MC_002_elemental_effects-SpriteSheet_85: -1949492703
+      MC_002_elemental_effects-SpriteSheet_47: -80483526
+      MC_002_elemental_effects-SpriteSheet_61: 584734479
+      MC_002_elemental_effects-SpriteSheet_67: -207401535
+      MC_002_elemental_effects-SpriteSheet_80: -1243119442
+      MC_002_elemental_effects-SpriteSheet_83: 250178626
+      MC_002_elemental_effects-SpriteSheet_48: 907188476
+      MC_002_elemental_effects-SpriteSheet_60: 214850782
+      MC_002_elemental_effects-SpriteSheet_79: 201053452
+      MC_002_elemental_effects-SpriteSheet_16: 1352118509
+      MC_002_elemental_effects-SpriteSheet_76: 1645534453
+      MC_002_elemental_effects-SpriteSheet_40: 2045879718
+      MC_002_elemental_effects-SpriteSheet_68: 97388835
+      MC_002_elemental_effects-SpriteSheet_32: 181534170
+      MC_002_elemental_effects-SpriteSheet_55: -472641725
+      MC_002_elemental_effects-SpriteSheet_49: 996043269
+      MC_002_elemental_effects-SpriteSheet_53: 1687798470
+      MC_002_elemental_effects-SpriteSheet_84: 272905863
+      MC_002_elemental_effects-SpriteSheet_27: 1572864624
+      MC_002_elemental_effects-SpriteSheet_9: 1539954929
+      MC_002_elemental_effects-SpriteSheet_54: 49215133
+      MC_002_elemental_effects-SpriteSheet_17: 265988692
+      MC_002_elemental_effects-SpriteSheet_69: 1822783801
+      MC_002_elemental_effects-SpriteSheet_71: 1564306448
+      MC_002_elemental_effects-SpriteSheet_21: -1201068255
+      MC_002_elemental_effects-SpriteSheet_26: 1360550008
+      MC_002_elemental_effects-SpriteSheet_66: -1108246216
+      MC_002_elemental_effects-SpriteSheet_39: -1740956057
+      MC_002_elemental_effects-SpriteSheet_65: -1530241439
+      MC_002_elemental_effects-SpriteSheet_24: 533919114
+      MC_002_elemental_effects-SpriteSheet_7: -1203433196
+      MC_002_elemental_effects-SpriteSheet_25: -592216850
+      MC_002_elemental_effects-SpriteSheet_45: -821322784
+      MC_002_elemental_effects-SpriteSheet_56: 1942800579
+      MC_002_elemental_effects-SpriteSheet_0: 976599912
+      MC_002_elemental_effects-SpriteSheet_59: -1719278045
+      MC_002_elemental_effects-SpriteSheet_75: 535869344
+      MC_002_elemental_effects-SpriteSheet_42: -327954253
+      MC_002_elemental_effects-SpriteSheet_2: 964454084
+      MC_002_elemental_effects-SpriteSheet_5: -196576256
+      MC_002_elemental_effects-SpriteSheet_23: 1983954548
+      MC_002_elemental_effects-SpriteSheet_38: -1037527630
+      MC_002_elemental_effects-SpriteSheet_87: 1951023683
+      MC_002_elemental_effects-SpriteSheet_72: -5488826
+      MC_002_elemental_effects-SpriteSheet_3: -1422253816
+      MC_002_elemental_effects-SpriteSheet_36: -670197368
+      MC_002_elemental_effects-SpriteSheet_58: 370647685
+      MC_002_elemental_effects-SpriteSheet_43: -1040498498
+      MC_002_elemental_effects-SpriteSheet_11: -174795104
+      MC_002_elemental_effects-SpriteSheet_51: 1253967992
+      MC_002_elemental_effects-SpriteSheet_63: -1501768495
+      MC_002_elemental_effects-SpriteSheet_19: 1270575883
+      MC_002_elemental_effects-SpriteSheet_13: 2001894685
+      MC_002_elemental_effects-SpriteSheet_74: -109950985
+      MC_002_elemental_effects-SpriteSheet_12: -309345602
+      MC_002_elemental_effects-SpriteSheet_22: -1392163362
+      MC_002_elemental_effects-SpriteSheet_46: 764205112
+      MC_002_elemental_effects-SpriteSheet_31: -606927069
+      MC_002_elemental_effects-SpriteSheet_57: -271395967
+      MC_002_elemental_effects-SpriteSheet_15: -544468433
+      MC_002_elemental_effects-SpriteSheet_28: 144322384
+      MC_002_elemental_effects-SpriteSheet_52: -995026339
+      MC_002_elemental_effects-SpriteSheet_14: -1860381246
+      MC_002_elemental_effects-SpriteSheet_77: -1008842251
+      MC_002_elemental_effects-SpriteSheet_4: 765331067
+      MC_002_elemental_effects-SpriteSheet_73: -31022406
+      MC_002_elemental_effects-SpriteSheet_91: 874052903
+      MC_002_elemental_effects-SpriteSheet_70: 1238891926
+      MC_002_elemental_effects-SpriteSheet_34: -323875227
+      MC_002_elemental_effects-SpriteSheet_8: 1754932737
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

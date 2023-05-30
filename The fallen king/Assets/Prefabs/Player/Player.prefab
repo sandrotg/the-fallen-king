@@ -133,6 +133,7 @@ MonoBehaviour:
   totalDamage: 0
   currentHealth: 0
   attackRate: 2
+  ShieldDefense: 0
   healthImage: {fileID: 0}
   speed: 4
   playerRigidBody: {fileID: 8724185144195663255}
@@ -216,9 +217,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1346163505537260892}
+  enemy: []
   GameDataFiles: 
   gameData:
     playerPosition: {x: 0, y: 0, z: 0}
+    healthsaved: 0
+    enemyhealthsaved: []
+    enemyPosition: []
 --- !u!1 &2924696295523853372
 GameObject:
   m_ObjectHideFlags: 0

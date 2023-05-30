@@ -20,6 +20,7 @@ abstract class Character : MonoBehaviour
     public float currentHealth;
     protected float nextAttackTime = 0f;
     [SerializeField] protected float attackRate = 2f;
+    [SerializeField] protected float ShieldDefense;
 
     public void SetPorcentCurrentHealth(float healthToGive){
         currentHealth += healthToGive*totalHealth/100;
@@ -40,6 +41,9 @@ abstract class Character : MonoBehaviour
 
     public float GetTotalHealth(){
         return totalHealth;
+    }
+    public float GetBaseDamage(){
+        return baseDamage;
     }
 
     public void AddSwordDamage(){
@@ -63,11 +67,11 @@ abstract class Character : MonoBehaviour
 
 
     public float getTotalDamage(){
-        return baseDamage;
+        return totalDamage;
     }    
 
     public float getTotalArmor(){
-        return baseArmor;
+        return totalArmor;
     }
     
 }

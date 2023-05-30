@@ -7,12 +7,12 @@ class enemy : Character
     [SerializeField] protected float enemySpeed = 1;
     protected Rigidbody2D enemyRigidBody;
     protected bool isMoving;
-    [SerializeField] protected float timeBetweenSteps;
-    protected float timeBetweenStepsCounter;
-    [SerializeField] protected float timeToMakeStep;
-    protected float timeToMakeStepCounter;
+    [SerializeField] private float timeBetweenSteps;
+    private float timeBetweenStepsCounter;
+    [SerializeField] private float timeToMakeStep;
+    private float timeToMakeStepCounter;
     [SerializeField] protected Vector2 directionToMakeStep;
-    public Animator enemyAnimator;
+    protected Animator enemyAnimator;
     protected GameObject player;
     [SerializeField] protected LayerMask playerLayer;
     [SerializeField] protected float lineOFSite;
@@ -22,6 +22,7 @@ class enemy : Character
     [SerializeField] protected int numAttacks;
     protected float distanceFromPlayer;
     protected const string Move = "isMoving";
+    [SerializeField]protected int experienceToAdd;
     void Start()
     {
         init();
@@ -166,17 +167,25 @@ class enemy : Character
         }
     }
 
-    public void TakeDamage(float damage)
+     public void TakeDamage(float damage)
     {
-        currentHealth -= damage;
-        if (currentHealth < 0)
+        if (ShieldDefense < 0f)
         {
-            currentHealth = 0;
+            ShieldDefense = 0f;
         }
-        enemyAnimator.SetTrigger("hit");
-        if (currentHealth == 0)
+        if (ShieldDefense == 0f)
         {
-            Die();
+            currentHealth -= damage;
+            enemyAnimator.SetTrigger("hit");
+            if(currentHealth < 0){
+                currentHealth = 0f;
+            }
+            if (currentHealth == 0)
+            {
+                Die();
+            }
+        }else if(damage == PlayerController.instance.getTotalDamage()*1.5f){
+            ShieldDefense -= damage;
         }
     }
 

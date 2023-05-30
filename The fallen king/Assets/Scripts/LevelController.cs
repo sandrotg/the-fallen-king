@@ -59,7 +59,9 @@ public class LevelController : MonoBehaviour
             PlayerController.instance.AddSwordDamage();
             PlayerController.instance.SetBaseHealth(healthLevels[currentlevel]);
             PlayerController.instance.AddExtraArmor();
-            PlayerController.instance.currentHealth = PlayerController.instance.GetTotalHealth();
+            if(currentlevel == 1){
+                PlayerController.instance.currentHealth = PlayerController.instance.GetTotalHealth();
+            }
         }
          Debug.Log(expToLevelUp[currentlevel]);
          Debug.Log(currentExp);
