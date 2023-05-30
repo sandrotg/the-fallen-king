@@ -33,7 +33,7 @@ class PlayerController : Character
     {
         animator.SetBool("isDead", false);
         animator.SetFloat(MOVING, 0);
-        gameover.enabled = false;|
+        gameover.enabled = false;
         /*totalArmor = baseArmor + extraArmor;
         totalHealth = baseHealth + totalArmor;
         currentHealth = totalHealth;
@@ -153,7 +153,7 @@ class PlayerController : Character
         }
     }
 
-    void Attack3()
+    void Attack3()00
     {
         animator.SetTrigger("Attack3");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackrange * 1.3f, enemyLayers);

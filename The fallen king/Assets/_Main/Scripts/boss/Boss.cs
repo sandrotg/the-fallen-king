@@ -29,6 +29,7 @@ class Boss : enemy
         player = GameObject.Find("Player");
         totalHealth = baseHealth + baseArmor;
         currentHealth = totalHealth;
+        Debug.Log(currentHealth);
         countDown = timeToShoot;
         countDownTP = timeToTP;
     }
@@ -46,8 +47,8 @@ class Boss : enemy
             countDown = timeToShoot;
         }
         if(countDownTP<=0){
-            countDownTP = timeToTP;
             Teleport();
+            countDownTP = timeToTP;
         }
 
     }
